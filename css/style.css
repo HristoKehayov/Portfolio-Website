@@ -8060,7 +8060,8 @@ textarea.form-control {
 
 .ftco-animate {
   opacity: 0;
-  visibility: hidden; }
+  visibility: hidden; 
+}
 
 .bg-primary {
   background: #2f89fc !important; }
@@ -8714,7 +8715,7 @@ textarea.form-control {
 
 .back-to-top i {
   padding-top: 12px;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 @media (max-width: 768px) {
