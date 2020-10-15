@@ -11650,12 +11650,12 @@ textarea.form-control {
 
 .ftco-footer-social li a span {
   position: absolute;
-  font-size: 26px;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  font-size: 26px;
 }
 
 .ftco-footer-social li a:hover {
@@ -12510,6 +12510,10 @@ textarea.form-control {
   font-size: 26px;
 }
 
+.tags li span i:hover{
+  color: #ffffff;
+}
+
 #ftco-loader {
   position: fixed;
   width: 96px;
@@ -12583,11 +12587,12 @@ textarea.form-control {
 }
 
 /* Center elemets verticaly horizontaly */
-.centerAll {
+.centerElement {
   margin: 0;
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
