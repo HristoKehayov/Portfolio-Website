@@ -11305,6 +11305,8 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
   font-weight: 700 !important;
   color: rgba(255, 255, 255, 0.08);
   text-transform: uppercase;
+  pointer-events: none;
+
 }
 
 @media (min-width: 992px) {
@@ -11769,6 +11771,7 @@ textarea.form-control {
 .mfp-with-zoom .mfp-container,
 .mfp-with-zoom.mfp-bg {
   opacity: 0;
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -12581,9 +12584,9 @@ textarea.form-control {
 
 /* Header Vertical Line */
 .verticleLine {
-  padding-left: 8px;
+  margin-right: 6px;
   background-color: #007bff;
-  width: 7px;
+  width: 6px;
 }
 
 /* Center elemets verticaly horizontaly */
@@ -12595,6 +12598,21 @@ textarea.form-control {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+.modal-dialog {
+  width: 98%;
+  height: 92%;
+  padding: 0;
+}
+
+.modal-content {
+  height: 70%;
+}
+.modal-body{
+  align-content: center;
+  align-items: center;
+  display: flex;
 }
 
 @-webkit-keyframes loader-rotate {

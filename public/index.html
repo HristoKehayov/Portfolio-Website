@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="../fonts/flaticon.css">
   <link rel="stylesheet" href="../fonts/icomoon/icomoon.css">
   <link rel="stylesheet" href="../fonts/devicon/devicon.css">
-  
+
 
   <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -79,7 +79,9 @@
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-              <div class="colorlib-navbar-brand verticleLine">
+              <!-- <div class="verticleLine"></div> -->
+              <div class="colorlib-navbar-brand row">
+                <i class="verticleLine"></i>
                 <a class="colorlib-logo" href="index.html">
                   <span class="logo-img" style="background-image: url(../images/person_0.jpg);"></span>
                   HK
@@ -153,7 +155,9 @@
               <div class="about-desc">
                 <h1 class="bold-text">About</h1>
                 <div class="p-5">
-                  <center><h2 class="mb-5">My name is <br>Hristo Kehayov</h2></center>
+                  <center>
+                    <h2 class="mb-5">My name is <br>Hristo Kehayov</h2>
+                  </center>
                   <p>
                     I have been programming since i was about 10 years old.
                     At 14 i wrote my first game in the programming languege lua. Since then I have never stopped.
@@ -176,7 +180,6 @@
           </div>
         </div>
       </section><!-- #about-me -->
-
 
       <!--==========================
         What I Do
@@ -253,8 +256,8 @@
 
             <!-- #project 1 (Rangers of the dungeon) -->
             <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-              <a href="project-1.html" class="image d-flex justify-content-center align-items-center"
-                style="background-image: url('../images/project-1.jpg'); "
+              <a href="#project-1" class="image d-flex justify-content-center align-items-center"
+                style="background-image: url('../images/project-1.jpg');"
                 data-scrollax=" properties: { translateY: '-30%'}">
                 <div class="icon d-flex text-center justify-content-center align-items-center">
                   <span class="icon-search"></span>
@@ -273,20 +276,22 @@
                 <ul class="tags list-unstyled mt-4">
                   <li>tags:</li>
                   <li><span><a href="https://www.google.com/search?q=csharp" target="_blank"><i class="devicon-csharp-plain"></i></a></span></li>
-                  <li><span><a href="https://www.google.com/search?q=jetbrains" target="_blank"><i class="devicon-jetbrains-plain" target="_blank" style="font-size: 34px;"></i></a></span></li>
-                  <li><span><a href="https://www.google.com/search?q=linux" target="_blank"><i class="devicon-linux-plain" target="_blank"></i></a></span></li>
-                  <li><span><i class="devicon-gitlab-plain" target="_blank"></i></span></li>
+                  <li><span><a href="https://www.google.com/search?q=jetbrains" target="_blank"><i class="devicon-jetbrains-plain" style="font-size: 34px;"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=linux" target="_blank"><i class="devicon-linux-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=gitlab" target="_blank"><i class="devicon-gitlab-plain"></i></a></span></li>
                 </ul>
                 <p><a href="https://play.google.com/store/apps/details?id=com.StickySpongeGames.Rod"
                     target="_blank">View Project</a></p>
               </div>
-            </div>
+            </div>        
 
             <!-- #project 2 (Ping Pong Game Simulator) -->
             <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-              <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center"
+              <a href="#project-2" class="image order-2 d-flex justify-content-center align-items-center"
                 style="background-image: url('../images/project-2.jpg'); "
-                data-scrollax=" properties: { translateY: '-30%'}">
+                data-scrollax=" properties: { translateY: '-30%'}"
+                data-content="Popover body content is set in this attribute."
+                role="button">
                 <div class="icon d-flex text-center justify-content-center align-items-center">
                   <span class="icon-search"></span>
                 </div>
@@ -303,9 +308,9 @@
                 </p>
                 <ul class="tags list-unstyled mt-4">
                   <li>tags:</li>
-                  <li><span><i class="devicon-csharp-plain"></i></span></li>
-                  <li><span><i class="devicon-visualstudio-plain"></i></span></li>
-                  <li><span><i class="devicon-github-original"></i></span></li>
+                  <li><span><a href="https://www.google.com/search?q=csharp" target="_blank"><i class="devicon-csharp-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=visualstudio" target="_blank"><i class="devicon-visualstudio-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=github" target="_blank"><i class="devicon-github-original"></i></a></span></li>
                 </ul>
                 <p><a href="https://github.com/HristoKehayov/Ping-Pong-Game-Simulator" target="_blank">View Project</a>
                 </p>
@@ -314,7 +319,7 @@
 
             <!-- #project 3 (GameBooster) -->
             <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-              <a href="portfolio-single.html" class="image d-flex justify-content-center align-items-center"
+              <a href="#project-3" class="image d-flex justify-content-center align-items-center"
                 style="background-image: url('../images/work-3.jpg'); "
                 data-scrollax=" properties: { translateY: '-30%'}">
                 <div class="icon d-flex text-center justify-content-center align-items-center">
@@ -326,7 +331,7 @@
                 <h2 class="heading"><a href="portfolio-single.html">GameBooster (console based game booster)</a>
                 </h2>
                 <p>
-                  Game Booster written on Pure C++ in Visual Studio IDE. 
+                  Game Booster written on Pure C++ in Visual Studio IDE.
                   It is simple program that clears the temporary files from your
                   system and changes battery mode to performance mode.
                   Moreover it disables also the unnecessary visual effects
@@ -334,9 +339,9 @@
                 </p>
                 <ul class="tags list-unstyled mt-4">
                   <li>tags:</li>
-                  <li><span><i class="devicon-cplusplus-plain"></i></span></li>
-                  <li><span><i class="devicon-visualstudio-plain"></i></span></li>
-                  <li><span><i class="devicon-gitlab-plain"></i></span></li>
+                  <li><span><a href="https://www.google.com/search?q=cplusplus" target="_blank"><i class="devicon-cplusplus-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=visualstudio" target="_blank"><i class="devicon-visualstudio-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=gitlab" target="_blank"><i class="devicon-gitlab-plain"></i></a></span></li>
                 </ul>
                 <p><a href="https://github.com/HristoKehayov/GameBooster" target="_blank">View Project</a>
                 </p>
@@ -344,8 +349,8 @@
             </div>
 
             <!-- #project 4 (ParkIn) -->
-            <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-              <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center"
+            <div class="block-3 d-md-flex ftco-animate" id="project-thumbnail" data-scrollax-parent="true">
+              <a href="#project-4" class="image order-2 d-flex justify-content-center align-items-center"
                 style="background-image: url('../images/project-4.jpg'); "
                 data-scrollax=" properties: { translateY: '-30%'}">
                 <div class="icon d-flex text-center justify-content-center align-items-center">
@@ -364,20 +369,20 @@
                 <!-- href="https://github.com/HristoKehayov/Youtube-Player" -->
                 <ul class="tags list-unstyled mt-4">
                   <li>tags:</li>
-                  <li><span><i class="devicon-nodejs-plain"></i></span></li>
-                  <li><span><i class="devicon-handlebars-plain"></i></span></li>
-                  <li><span><i class="devicon-jquery-plain"></i></span></li>
-                  <li><span><i class="devicon-mongodb-plain"></i></span></li>
-                  <li><span><i class="devicon-github-original"></i></span></li>
+                  <li><span><a href="https://www.google.com/search?q=nodejs" target="_blank"><i class="devicon-nodejs-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=handlebars" target="_blank"><i class="devicon-handlebars-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=jquery" target="_blank"><i class="devicon-jquery-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=mongodb" target="_blank"><i class="devicon-mongodb-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=github" target="_blank"><i class="devicon-github-original"></i></a></span></li>
                 </ul>
-                <p><a  target="_blank">View Project</a>
+                <p><a target="_blank">View Project</a>
                 </p>
               </div>
             </div>
 
             <!-- #project 5 (LinkedIn Connection Grinnder) -->
-            <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-              <a href="portfolio-single.html" class="image d-flex justify-content-center align-items-center"
+            <div class="block-3 d-md-flex ftco-animate" id="project-thumbnail" data-scrollax-parent="true">
+              <a href="#project-5" class="image d-flex justify-content-center align-items-center"
                 style="background-image: url('../images/project-5.jpg'); "
                 data-scrollax=" properties: { translateY: '-30%'}">
                 <div class="icon d-flex text-center justify-content-center align-items-center">
@@ -389,25 +394,26 @@
                 <h2 class="heading"><a href="portfoli-singleo.html">LinkedIn Connection Grinnder</a>
                 </h2>
                 <p>
-                  A simple bot about sending automated connection messages to your network. Written in pure Python with the help
+                  A simple bot about sending automated connection messages to your network. Written in pure Python with
+                  the help
                   of the Selenium automating browser
                 </p>
                 <ul class="tags list-unstyled mt-4">
                   <li>Tags:</li>
-                  <li><span><i class="devicon-python-plain"></i></span></li>
-                  <li><span><i class="devicon-visualstudio-plain"></i></span></li>
-                  <li><span><i class="devicon-github-original"></i></span></li>
+                  <li><span><a href="https://www.google.com/search?q=python" target="_blank"><i class="devicon-python-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=visualstudio" target="_blank"><i class="devicon-visualstudio-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=github" target="_blank"><i class="devicon-github-original"></i></a></span></li>
                 </ul>
                 <!-- href="https://github.com/HristoKehayov/Ping-Pong-Game-Simulator" -->
                 <p>
-                  <a  target="_blank">View Project</a>
+                  <a target="_blank">View Project</a>
                 </p>
               </div>
             </div>
 
             <!-- #project 6 (SoftUni Education) -->
-            <div class="block-3 d-md-flex ftco-animate" data-scrollax-parent="true">
-              <a href="portfolio-single.html" class="image order-2 d-flex justify-content-center align-items-center"
+            <div class="block-3 d-md-flex ftco-animate" id="project-thumbnail" data-scrollax-parent="true">
+              <a href="#project-6" class="image order-2 d-flex justify-content-center align-items-center"
                 style="background-image: url('../images/project-6.jpg');"
                 data-scrollax=" properties: { translateY: '-30%'}">
                 <div class="icon d-flex text-center justify-content-center align-items-center">
@@ -418,24 +424,26 @@
                 <h4 class="subheading">Education</h4>
                 <h2 class="heading"><a href="portfoli-singleo.html">Software Technologies Edu</a>
                 </h2>
-                <p>This is all of my past education courses and seminars in 
-                  <a href="https://softuni.bg/" target="_blank">softuni</a>. 
-                  It consist of all of my homeworks and 
+                <p>This is all of my past education courses and seminars in
+                  <a href="https://softuni.bg/" target="_blank">softuni</a>.
+                  It consist of all of my homeworks and
                   past courses and its materials.
                 </p>
                 <ul class="tags list-unstyled mt-4">
                   <li>tags:</li>
-                  <li><span><i class="devicon-html5-plain"></i></span></li>
-                  <li><span><i class="devicon-css3-plain"></i></span></li>
-                  <li><span><i class="devicon-javascript-plain"></i></span></li>
-                  <li><span><i class="devicon-php-plain"></i></span></li>
-                  <li><span><i class="devicon-handlebars-plain"></i></span></li>
-                  <li><span><i class="devicon-mysql-plain"></i></span></li>
-                  <li><span><i class="devicon-dot-net-plain"></i></span></li>
-                  <li><span><i class="devicon-git-plain"></i></span></li>
+                  <li><span><a href="https://www.google.com/search?q=html5" target="_blank"><i class="devicon-html5-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=css3" target="_blank"><i class="devicon-css3-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=javascript" target="_blank"><i class="devicon-javascript-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=php" target="_blank"><i class="devicon-php-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=handlebars" target="_blank"><i class="devicon-handlebars-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=mysql" target="_blank"><i class="devicon-mysql-plain"></i></a></span></li>
+                  <li><span><a href="https://www.google.com/search?q=dotnet" target="_blank"><i class="devicon-dot-net-plain"></a></i></span></li>
+                  <li><span><a href="https://www.google.com/search?q=git" target="_blank"><i class="devicon-git-plain"></i></a></span></li>
                 </ul>
                 <p>
-                  <a href="https://github.com/HristoKehayov/Programming-Fundamentals--September-2016" onclick="window.open('https://github.com/HristoKehayov/Software-Technologies---July-2018'); return true;" target="_blank">View Project </a>
+                  <a href="https://github.com/HristoKehayov/Programming-Fundamentals--September-2016"
+                    onclick="window.open('https://github.com/HristoKehayov/Software-Technologies---July-2018'); return true;"
+                    target="_blank">View Project </a>
                 </p>
               </div>
             </div>
@@ -460,30 +468,30 @@
             <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
               <div class="block-18">
                 <div class="text">
-                  <span class="ftco-label">Clients</span>
-                  <strong class="number" data-number="420">0</strong>
+                  <span class="ftco-label">Lines of code written</span>
+                  <strong class="number" data-number="500000">0</strong>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-center">
-            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
+            <div class="col-md-5 counter-wrap ftco-animate">
               <div class="block-18">
                 <div class="text">
-                  <span class="ftco-label">Project done</span>
-                  <strong class="number" data-number="890">0</strong>
+                  <span class="ftco-label">Cups of coffee</span>
+                  <strong class="number" data-number="1000">0</strong>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="row d-flex justify-content-end">
-            <div class="col-md-5 counter-wrap ftco-animate">
+            <div class="col-md-5 col-sm-5 counter-wrap ftco-animate">
               <div class="block-18">
                 <div class="text">
-                  <span class="ftco-label">Cups of coffee</span>
-                  <strong class="number" data-number="1000">0</strong>
+                  <span class="ftco-label">Projects done</span>
+                  <strong class="number" data-number="23">0</strong>
                 </div>
               </div>
             </div>
@@ -501,11 +509,15 @@
             <div class="col-md-5 text-center">
               <div class="ftco-footer-widget mb-5">
                 <ul class="ftco-footer-social list-unstyled">
-                  <li><a href="https://www.facebook.com/Hikponss" target="_blank"><span class="icon-facebook"></span></a></li>
-                    <li><a href="https://twitter.com/hikponss" target="_blank"><span class="icon-twitter"></span></a></li>
-                    <li><a href="https://www.instagram.com/hikponss/" target="_blank"><span class="icon-instagram"></span></a></li>
-                    <li><a href="https://github.com/HristoKehayov" target="_blank"><span class="icon-github"></span></a></li>
-                    <li><a href="https://www.linkedin.com/in/hristo-kehayov-315700183/" target="_blank"><span class="icon-linkedin"></span></a></li>
+                  <li><a href="https://www.facebook.com/Hikponss" target="_blank"><span
+                        class="icon-facebook"></span></a></li>
+                  <li><a href="https://twitter.com/hikponss" target="_blank"><span class="icon-twitter"></span></a></li>
+                  <li><a href="https://www.instagram.com/hikponss/" target="_blank"><span
+                        class="icon-instagram"></span></a></li>
+                  <li><a href="https://github.com/HristoKehayov" target="_blank"><span class="icon-github"></span></a>
+                  </li>
+                  <li><a href="https://www.linkedin.com/in/hristo-kehayov-315700183/" target="_blank"><span
+                        class="icon-linkedin"></span></a></li>
                 </ul>
               </div>
               <div class="ftco-footer-widget">
@@ -540,6 +552,25 @@
           <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
             stroke="#007bff"></circle>
         </svg>
+      </div>
+      
+      <!--==========================
+        Project Thumbnail photos
+      ============================-->
+      <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+
+            <div class="modal-body">
+              <img src="" id="imagepreview" style="width: 450px; height: 264px;" >
+            </div>
+
+          </div>
+        </div>
       </div>
 
     </div><!-- #main-page-contents -->

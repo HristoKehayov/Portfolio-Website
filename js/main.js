@@ -84,7 +84,7 @@ $(document).ready(function ($) {
 				$('body').addClass('menu-show');
 				setTimeout(function () {
 					$('#colorlib-main-nav > .js-colorlib-nav-toggle').addClass('show');
-				}, 900);
+				}, 400);
 			}
 		})
 	};
@@ -220,10 +220,22 @@ $(document).ready(function ($) {
 		}
 	});
 	$("a[href='#top']").click(function () {
-		$("html, body").animate({ scrollTop: 0 }, "slow");
+		$("html, body").animate({
+			scrollTop: 0
+		}, "slow");
 		return false;
 	});
 
-	// Zoom in Photo
+	// Zoom in Project Thumbnail Photo
+	var zoomInProjectThumbnail = $("a").click(function () {
+		if ($(this).attr('class').indexOf("image") > -1) {
+			var bgPath = $(this).css('background-image');
+			bgPath = bgPath.replace('url(', '').replace(')', '').replace(/\"/gi, "");
+
+			$('#imagepreview').attr('src', bgPath);
+			$('#imagemodal').modal('show');
+		}
+	});
+	zoomInProjectThumbnail();
 
 });
