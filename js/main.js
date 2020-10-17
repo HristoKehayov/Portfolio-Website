@@ -231,7 +231,9 @@ $(document).ready(function ($) {
 		if ($(this).attr('class').indexOf("image") > -1) {
 			var bgPath = $(this).css('background-image');
 			bgPath = bgPath.replace('url(', '').replace(')', '').replace(/\"/gi, "");
-
+			var projectTitle = $(this).attr('href');
+			projectTitle = projectTitle.substring(1);
+			$('#ModalHeading').text(projectTitle);
 			$('#imagepreview').attr('src', bgPath);
 			$('#imagemodal').modal('show');
 		}
