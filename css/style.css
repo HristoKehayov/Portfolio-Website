@@ -3181,7 +3181,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary:focus,
 .btn-outline-primary.focus {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(121, 239, 180, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(239, 121, 121, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(121, 239, 180, 0.5);
 }
 
@@ -11255,7 +11255,7 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 .btn.btn-primary.btn-outline-primary {
   border: 1px solid #2f89fc;
   background: transparent;
-  color: #2f89fc;
+  color: #ff0800;
 }
 
 .btn.btn-primary.btn-outline-primary:hover {
@@ -11457,6 +11457,30 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 .form-group label {
   color: #fff;
 }
+.form-group input{
+  color: #858585 !important;
+  border: 1px solid #2c2c2c;
+}
+.form-group input:hover, 
+.form-group textarea:hover{
+  color: #007bff !important;
+  border: 1px solid #007bff;
+  background-color: transparent;
+}
+.form-group input:focus,
+.form-group textarea:focus{
+  color: #007bff !important;
+  border: 1px solid #007bff;
+  background-color: transparent;
+}
+
+.form-group input.btn:not(:disabled):not(.disabled):active{
+  color: #fff !important;
+  background-color: #007bff;
+  /* border-color: white; */
+  border-color: #007bff;
+}
+
 
 .form-control {
   height: 52px !important;
@@ -12512,6 +12536,7 @@ textarea.form-control {
   cursor: pointer;
   background-color: #333;
 }
+/*  */
 
 /* Tags visuals */
 .tags li {
@@ -12542,6 +12567,7 @@ textarea.form-control {
 .tags li span i:hover{
   color: #ffffff;
 }
+/*  */
 
 #ftco-loader {
   position: fixed;

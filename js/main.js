@@ -6,7 +6,6 @@ AOS.init({
 $(document).ready(function ($) {
 
 	"use strict";
-
 	$(window).stellar({
 		responsive: false,
 		parallaxBackgrounds: true,
@@ -71,7 +70,7 @@ $(document).ready(function ($) {
 	};
 	fullHeight();
 
-	// burgerMenu
+	// burgerMenu (hidden top menu toggle)
 	var burgerMenu = function () {
 
 		$('.js-colorlib-nav-toggle').on('click', function (event) {
@@ -90,7 +89,7 @@ $(document).ready(function ($) {
 	};
 	burgerMenu();
 
-	// counter
+	// counter (animate fun facts number)
 	var counter = function () {
 
 		$('#section-counter').waypoint(function (direction) {
@@ -117,7 +116,7 @@ $(document).ready(function ($) {
 	}
 	counter();
 
-	// contentWayPoint
+	// contentWayPoint animation trigger
 	var contentWayPoint = function () {
 		var i = 0;
 		$('.ftco-animate').waypoint(function (direction) {
@@ -196,7 +195,7 @@ $(document).ready(function ($) {
 	});
 	$('#appointment_time').timepicker();
 
-	// pageProgress
+	// pageProgress (loader)
 	var pageProgress = function () {
 		$(window).scroll(function () {
 			var wintop = $(window).scrollTop(),
@@ -227,7 +226,7 @@ $(document).ready(function ($) {
 	});
 
 	// Zoom in Project Thumbnail Photo
-	var zoomInProjectThumbnail = $("a").click(function () {
+	$("a").click(function () {
 		if ($(this).attr('class').indexOf("image") > -1) {
 			var bgPath = $(this).css('background-image');
 			bgPath = bgPath.replace('url(', '').replace(')', '').replace(/\"/gi, "");
@@ -238,6 +237,66 @@ $(document).ready(function ($) {
 			$('#imagemodal').modal('show');
 		}
 	});
-	zoomInProjectThumbnail();
+
+	// Skills Progress bar animation
+	var skillsProgressBarsAnim = function () {
+		$('#section-skills').waypoint(function (direction) {
+
+			if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
+
+				$(".progress-bar").each(function () {
+					var aria_valuenow = $(this).attr("aria-valuenow");
+					$(this).animate({
+						width: aria_valuenow + "%"
+					}, {
+						duration: 800,
+						easing: 'linear'
+					});
+				});
+
+			}
+
+		}, {
+			offset: '95%'
+		});
+
+	}
+	skillsProgressBarsAnim();
+
+	//Send Email
+	$('#sendEmail').click(function () {
+		ValidateAndSendEmail();
+	});
+
+	function ValidateAndSendEmail() {
+		var formName = document.getElementById("name").value;
+		var formEmail = document.getElementById("email").value;
+		var formSubject = document.getElementById("subject").value;
+		var formMessage = document.getElementById("message").value;
+
+		if (validateEmail(formEmail)) {
+			Email.send({
+				Host: "smtp.gmail.com",
+				Username: "hikponss@gmail.com",
+				Password: "KwfnDEzUteM44vA",
+				To: 'hikponss@gmail.com',
+				From: formEmail,
+				Subject: formSubject,
+				Body: formMessage,
+			}).then(
+				// message => alert("mail sent successfully")
+				alert("mail sent successfully")
+			);
+			return true;
+		}
+		alert("not valid email")
+		return false;
+	}
+
+	function validateEmail(email) {
+		const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		return re.test(email);
+	}
+
 
 });
