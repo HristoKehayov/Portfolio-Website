@@ -59,6 +59,16 @@
                 <li><a href="portfolio.html"><span><small>04</small>Portfolio</span></a></li>
                 <li><a href="blog.html"><span><small>05</small>Blog</span></a></li>
                 <li><a href="contact.html"><span><small>06</small>Contact</span></a></li>
+                <li><a href=""><span><small>07</small>Language</span></a></li>
+                <li><a href=""><span class="vl"></span></a></li>
+                <li>
+                  <div>
+                    <a href="#eng" class="langSVG"><img src="../images/eng.svg" alt="german flag" style="width: 60px;"></a>
+                    <a href="#de" class="langSVG"><img src="../images/germany.svg" alt="german flag" style="width: 60px;"></a>
+                    <a href="#bg" class="langSVG"><img src="../images/bulgaria.svg" alt="german flag" style="width: 60px;"></a>
+                  </div>
+                </li>
+                
               </ul>
             </div>
           </div>
@@ -603,8 +613,12 @@
 
             <div class="modal-header">
               <h2 class="heading" id="ModalHeading"></h2>
-              <button type="button" id="closeModal" class="btn btn-secondary" style="border-radius: 20px; "
-                data-dismiss="modal">Close</button>
+              <!-- <button type="button" id="closeModal" class="btn btn-secondary" style="border-radius: 20px; "
+                data-dismiss="modal">Close</button> -->
+
+              <button type="button" data-dismiss="modal" id="closeModal" style="border: 1px solid white; color: white; 
+                background-color: transparent; border-radius: 13px;"
+                class="btn btn-outline-primary py-3 px-5">Close</button>
             </div>
 
             <!-- <div class="modal-body">
@@ -636,9 +650,14 @@
   <script src="../lib/owlcarousel/js/owl.carousel.min.js"></script>
   <script src="../lib/aos/js/aos.js"></script>
   <script src="../lib/scroll/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false">
-  </script>
-  <script src="../lib/google/google-map.js"></script>
+
+  <!--==========================
+    Localization
+  ============================-->
+  <script src="../lib/localization/lingumania.min.js"></script>
+  <script src="../public/localization/de/index.json"></script>
+  <!-- #end-localization -->
+
   <script src="../js/main.js"></script>
 </body>
 

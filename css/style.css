@@ -6200,15 +6200,15 @@ button.close {
 
 .modal-header .close {
   padding: 1rem 1.8rem;
-  margin: -1rem -1rem -1rem auto; 
+  margin: -1rem -1rem -1rem auto;
   color: black;
 }
 
-.modal-header h2.heading{
+.modal-header h2.heading {
   display: table-cell;
   position: relative;
-  width:100%;
-  vertical-align:middle;
+  width: 100%;
+  vertical-align: middle;
   text-align: center;
 }
 
@@ -10700,6 +10700,12 @@ h5,
   color: white;
   padding: 5px 0;
 }
+#colorlib-main-nav ul li div a.langSVG {
+  /* display: block; */
+  display: inline;
+  color: white;
+  padding: 5px 0;
+}
 
 #colorlib-main-nav ul li a span {
   font-size: 40px;
@@ -11457,24 +11463,27 @@ header .colorlib-navbar-brand .colorlib-logo:focus {
 .form-group label {
   color: #fff;
 }
-.form-group input{
+
+.form-group input {
   color: #858585 !important;
   border: 1px solid #2c2c2c;
 }
-.form-group input:hover, 
-.form-group textarea:hover{
-  color: #007bff !important;
-  border: 1px solid #007bff;
-  background-color: transparent;
-}
-.form-group input:focus,
-.form-group textarea:focus{
+
+.form-group input:hover,
+.form-group textarea:hover {
   color: #007bff !important;
   border: 1px solid #007bff;
   background-color: transparent;
 }
 
-.form-group input.btn:not(:disabled):not(.disabled):active{
+.form-group input:focus,
+.form-group textarea:focus {
+  color: #007bff !important;
+  border: 1px solid #007bff;
+  background-color: transparent;
+}
+
+.form-group input.btn:not(:disabled):not(.disabled):active {
   color: #fff !important;
   background-color: #007bff;
   /* border-color: white; */
@@ -11643,15 +11652,19 @@ textarea.form-control {
 .ftco-footer .ftco-footer-widget .email a {
   color: rgba(255, 255, 255, 0.5);
 }
+
 .ftco-footer .ftco-footer-widget .email a.footerLink:hover {
   color: #007bff;
 }
+
 .about-desc .ftco-footer-widget p a.headerLink:hover {
   color: #ffffff;
 }
-.contact-info div a.headerLink:hover{
+
+.contact-info div a.headerLink:hover {
   color: #ffffff;
 }
+
 /*  */
 
 .ftco-footer .ftco-footer-widget h2 {
@@ -12536,7 +12549,7 @@ textarea.form-control {
   cursor: pointer;
   background-color: #333;
 }
-/*  */
+/*=============================*/
 
 /* Tags visuals */
 .tags li {
@@ -12564,10 +12577,10 @@ textarea.form-control {
   font-size: 26px;
 }
 
-.tags li span i:hover{
+.tags li span i:hover {
   color: #ffffff;
 }
-/*  */
+/*=============================*/
 
 #ftco-loader {
   position: fixed;
@@ -12651,6 +12664,24 @@ textarea.form-control {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+/*=============================*/
+
+/* Position for get in touch image in contact page */
+.contactPage-Img {
+  position: absolute;
+}
+/*=============================*/
+
+/*--==========================
+  navbar dropdown language verticle line
+============================*/
+.vl {
+  border-left: 2px solid #666666;
+  height: 1px;
+  position: absolute;
+  top: 0;
+}
+/*=============================*/
 
 .modal-dialog {
   width: 98%;
@@ -12661,7 +12692,7 @@ textarea.form-control {
 /* .modal-content {
   height: 70%;
 } */
-.modal-body{
+.modal-body {
   align-content: center;
   align-items: center;
   display: flex;

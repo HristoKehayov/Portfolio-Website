@@ -3,6 +3,7 @@ AOS.init({
 	easing: 'slide'
 });
 
+
 $(document).ready(function ($) {
 
 	"use strict";
@@ -265,16 +266,21 @@ $(document).ready(function ($) {
 
 	//Send Email
 	$('#sendEmail').click(function () {
-		ValidateAndSendEmail();
-	});
+		// var formName = $("#name").val();
+		var formEmail = $("#email").val();
+		var formSubject = $("#subject").val();
+		var formMessage = $("#message").val();
+		const requiredEmailChars = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-	function ValidateAndSendEmail() {
-		var formName = document.getElementById("name").value;
-		var formEmail = document.getElementById("email").value;
-		var formSubject = document.getElementById("subject").value;
-		var formMessage = document.getElementById("message").value;
-
-		if (validateEmail(formEmail)) {
+		if (formEmail == "" && formSubject == "" && formSubject == "" && formMessage == "") {
+			Swal.fire({
+				icon: 'error',
+				title: "Opps...\nSomething went wrong!",
+				text: 'Some of the fields are empty!',
+				footer: '<a href>Why do I have this issue?</a>'
+			})
+		}
+		else if (requiredEmailChars.test(formEmail)) {
 			Email.send({
 				Host: "smtp.gmail.com",
 				Username: "hikponss@gmail.com",
@@ -284,19 +290,42 @@ $(document).ready(function ($) {
 				Subject: formSubject,
 				Body: formMessage,
 			}).then(
-				// message => alert("mail sent successfully")
-				alert("mail sent successfully")
-			);
-			return true;
+				Swal.fire({
+					icon: 'success',
+					title: 'Success!',
+					html: 'Your message has been sent successfully!'
+				}).then((result) => {
+					if (result.isConfirmed) {
+						let timerInterval
+						Swal.fire({
+						  title: 'Thank you \nfor contacting me!',
+						  icon: 'info',
+						  html: 'I will make sure to get back to you as soon as possible!',
+						  showCloseButton: true,
+						  focusConfirm: false,
+						  confirmButtonText:
+							'<i class="icon icon-thumbs-up"></i> Great!',
+						  confirmButtonAriaLabel: 'Thumbs up, great!',
+						}).then((result) => {
+						  /* Read more about handling dismissals below */
+						  if (result.dismiss === Swal.DismissReason.timer) {
+						  } else{
+							  $('#sendEmailForm').trigger("reset");
+							  location.reload();
+						  }
+						})
+					}
+				})
+			)
+		} else {
+			Swal.fire({
+				icon: 'error',
+				title: "Opps...\nSomething went wrong!",
+				text: 'Invalid Email Address!',
+				footer: '<a href>Why do I have this issue?</a>'
+			})
 		}
-		alert("not valid email")
-		return false;
-	}
 
-	function validateEmail(email) {
-		const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-		return re.test(email);
-	}
-
+	});
 
 });
