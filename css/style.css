@@ -12524,11 +12524,11 @@ textarea.form-control {
 
 /* Back to top button */
 .back-to-top {
-  position: fixed;
   display: none;
+  position: fixed;
   background: #007bff;
   color: rgb(0, 0, 0);
-  display: inline-block;
+  /* display: inline-block; */
   width: 44px;
   height: 44px;
   text-align: center;
