@@ -16,7 +16,7 @@ var linguJSON = {
           "url_pattern": "?"
       }
     ],
-    "translated_segments": [
+    "translated_segments": [df
         {
             "source": "Home",
             "targer_us": "Home",
