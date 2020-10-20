@@ -73,7 +73,6 @@ $(document).ready(function ($) {
 
 	// burgerMenu (hidden top menu toggle)
 	var burgerMenu = function () {
-
 		$('.js-colorlib-nav-toggle').on('click', function (event) {
 			event.preventDefault();
 			var $this = $(this);
@@ -325,7 +324,7 @@ $(document).ready(function ($) {
 				footer: '<a href>Why do I have this issue?</a>'
 			})
 		}
-
 	});
-
 });
+
+

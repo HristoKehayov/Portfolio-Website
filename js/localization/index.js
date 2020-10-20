@@ -1,58 +1,99 @@
-var linguJSON = {
-    "languages": [
-      {
-          "lang_name": "English",
-          "lang_code": "us",
-          "url_pattern": "?"
-      },
-      {
-          "lang_name": "German",
-          "lang_code": "de",
-          "url_pattern": "?"
-      },
-      {
-          "lang_name": "Bulgarian",
-          "lang_code": "bg",
-          "url_pattern": "?"
-      }
-    ],
-    "translated_segments": [
-        //======== HIDDEN TOP NAV BAR ========//
-        {
-            "source": "01Home",
-            "target_bg": "01Начало",
-            "target_de": "01Startseite"
+$('#selectLanguageDropdown').localizationTool({
+    //--=============================
+    //  LANGUAGES
+    //===============================--//
+    'languages': {
+        'english' : {
+            'country' : 'United Kingdom',
+            'language': 'English',
+            'countryTranslated' : 'United Kingdom',
+            'languageTranslated': 'English',
+            'flag': {
+                'url': 'https://s.yimg.com/aah/yhst-12261471879087/canada-flag-retroflective-small-3m-decal-3-4-x-1-1-2-28.jpg'
+            }
         },
-        {
-            "source": "Resume",
-            "target_bg": "Резюме",
-            "target_de": "Résumé"
+        'german': {
+            'language': 'German',
+            'country': 'Germany',
+            'languageTranslated': "Deutsch",
+            'countryTranslated': "Deutschland",
+            'flag': {
+                'url': 'https://s.yimg.com/aah/yhst-12261471879087/american-flag-retroflective-small-3m-decal-3-4-x-1-1-2-29.jpg'
+            }
         },
-        //===================//
-        
-        //======== SLIDESHOW ========//
-        {
-            "source": "Hello! I'm",
-            "target_bg": "Здравейте! Аз съм",
-            "target_de": "Hallo! Ich bin"
+        'bulgarian': {
+            'language': 'Bulgarian',
+            'country': 'Bulgaria',
+            'languageTranslated': "Bulgarian",
+            'countryTranslated': "Bulgaria",
+            'flag': {
+                'url': 'https://img.theculturetrip.com/768x432/wp-content/uploads/2018/03/austria-26881_1280.png'
+            }
         },
-        //===================//
-
-    ],
-    // "custom_lang_switcher_container_id": "lang_Switcher_id",
-    // "custom_lang_switcher_html": "<div id=\"langswitcher\" class=\"notranslate\"><a id=\"currlanglink\" href=\"\">[[linguCurrLang]]</a> <a href=\"[[linguTargetLangHref1]]\" class=\"targetlang\">[[linguTargetLang1]]</a><a href=\"[[linguTargetLangHref2]]\" class=\"targetlang\">[[linguTargetLang2]]</a></div>",
+    },
     
-    // "translated_image_segments": [
-    //     {
-    //         "img_source": "http://www.lingumania.com/img/try-a-demo2.png",
-    //         "img_target_fr": "http://www.lingumania.com/img/try-a-demo-fr.png",
-    //         "img_target_es": "http://www.lingumania.com/Demos/assets/FFFFFF-0.8.png" //we don't have this image's Spanish translation, so we'll just link to a pixel image instead
-    //     }
-    // ],
-    // "translated_pages": [
-    //   {
-    //       "slug": "/Demos/Demo.html" //we only have translation for this Demo page; other links on the page (ie. link to www.lingumania.com homepage will not be prefixed with fr.lingumania.com or es.lingumania.com)
-    //   }
-    // ]
-};
-                                                 
+    //--=============================
+    //  SETTINGS
+    //===============================--//
+    'defaultLanguage': 'english', // this is the language that the server is sending anyway
+    'ignoreUnmatchedSelectors': true,
+    'showFlag': false,
+    'showCountry': true,
+    'showLanguage': false,
+    // 'onLanguageSelected': function (languageCode) {
+    //     /*
+    //      * When the user translates we set the cookie
+    //      */
+    //     // $.cookie('userLanguage', languageCode);
+    //     // burgerMenu();
+            
+    //     return true;
+    // },
+
+
+    //--=============================
+    //  TRANSLATIONS
+    //===============================--//
+    'strings': {
+        /* HIDDEN NAV BAR */
+        'Home': {
+            'german': 'chopa',
+            'bulgarian': 'gosho'
+        },
+
+        /* SLIDERSHOW */
+        'Hello! I\'m': {
+            'english': 'Hello! I\'m',
+            'german': 'Hallo! Ich bin',
+            'bulgarian': 'Здрасти! Аз съм'
+        },
+        'Born in Bulgaria': {
+            'german': 'Geboren in Bulgaria',
+            'bulgarian': 'Роден в България'
+        },
+        'Settled in Austria': {
+            'german': 'Angesiedelt in Österreich ',
+            'bulgarian': 'Установен в Австрия'
+        },
+        'A Solo Game Developer': {
+            'german': 'Ein Solo-Spieleentwickler',
+            'bulgarian': 'Соло Разработчик на компютърни игри'
+        },
+        'I also love to': {
+            'german': 'Ich liebe es auch zu',
+            'bulgarian': 'Аз също обичам да'
+        },
+        'Train': {
+            'german': 'Trainieren',
+            'bulgarian': 'Тренирам'
+        },
+
+        'About': {
+            'english': 'About',
+            'german': 'Mehr',
+            'bulgarian': 'Още'
+        },
+        
+    }
+
+});
