@@ -3,67 +3,93 @@ $('#selectLanguageDropdown').localizationTool({
     //  LANGUAGES
     //===============================--//
     'languages': {
-        'english' : {
-            'country' : 'United Kingdom',
-            'language': 'English',
-            'countryTranslated' : 'United Kingdom',
+        'english': {
+            'country': 'United States',
+            'language': 'en',
+            'countryTranslated': 'United States',
             'languageTranslated': 'English',
             'flag': {
-                'url': 'https://s.yimg.com/aah/yhst-12261471879087/canada-flag-retroflective-small-3m-decal-3-4-x-1-1-2-28.jpg'
+                'url': '../images/flags/us.svg'
             }
         },
         'german': {
-            'language': 'German',
+            'language': 'de',
             'country': 'Germany',
-            'languageTranslated': "Deutsch",
             'countryTranslated': "Deutschland",
+            'languageTranslated': "de",
             'flag': {
-                'url': 'https://s.yimg.com/aah/yhst-12261471879087/american-flag-retroflective-small-3m-decal-3-4-x-1-1-2-29.jpg'
+                'url': '../images/flags/de.svg'
             }
         },
         'bulgarian': {
-            'language': 'Bulgarian',
+            'language': 'bg',
             'country': 'Bulgaria',
-            'languageTranslated': "Bulgarian",
-            'countryTranslated': "Bulgaria",
+            'countryTranslated': "България",
+            'languageTranslated': "бг",
             'flag': {
-                'url': 'https://img.theculturetrip.com/768x432/wp-content/uploads/2018/03/austria-26881_1280.png'
+                'url': '../images/flags/bg.svg'
             }
         },
     },
-    
+
     //--=============================
     //  SETTINGS
     //===============================--//
-    'defaultLanguage': 'english', // this is the language that the server is sending anyway
+    'defaultLanguage': 'english',
     'ignoreUnmatchedSelectors': true,
-    'showFlag': false,
-    'showCountry': true,
-    'showLanguage': false,
-    // 'onLanguageSelected': function (languageCode) {
-    //     /*
-    //      * When the user translates we set the cookie
-    //      */
-    //     // $.cookie('userLanguage', languageCode);
-    //     // burgerMenu();
-            
-    //     return true;
-    // },
+    'showFlag': true,
+    'showCountry': false,
+    'showLanguage': true,
+    'onLanguageSelected': function (languageCode) {
+        /*
+         * When the user translates we set the cookie and new url
+         */
+        $.cookie('userLanguage', languageCode);
+        var newUrl = updateQueryStringParameter(window.location.href, 'lang', languageCode);
+        window.history.pushState("", "Portfolio Website", newUrl);
+        location.reload();
+        return true;
+    },
+    'labelTemplate': '{{language}}',
 
 
     //--=============================
     //  TRANSLATIONS
     //===============================--//
     'strings': {
-        /* HIDDEN NAV BAR */
-        'Home': {
-            'german': 'chopa',
-            'bulgarian': 'gosho'
+        //--=============================
+        //  HIDDEN NAV BAR
+        //===============================--//
+        'id:navbarEl-Home': {
+            'german': 'StartSeite',
+            'bulgarian': 'Начало'
         },
+        'id:navbarEl-Resume': {
+            'german': 'Resümee',
+            'bulgarian': 'Резюме'
+        },
+        'id:navbarEl-Services': {
+            'german': 'Dienstleistungen',
+            'bulgarian': 'Услуги'
+        },
+        'id:navbarEl-Portfolio': {
+            'german': 'Portfolio',
+            'bulgarian': 'Портфолио'
+        },
+        'id:navbarEl-Blog': {
+            'german': 'Blog',
+            'bulgarian': 'Блог'
+        },
+        'id:navbarEl-Contact': {
+            'german': 'Kontakt',
+            'bulgarian': 'Контакт'
+        },
+        /*=============================*/
 
-        /* SLIDERSHOW */
+        //--=============================
+        //  SLIDESHOW
+        //===============================--//
         'Hello! I\'m': {
-            'english': 'Hello! I\'m',
             'german': 'Hallo! Ich bin',
             'bulgarian': 'Здрасти! Аз съм'
         },
@@ -93,7 +119,22 @@ $('#selectLanguageDropdown').localizationTool({
             'german': 'Mehr',
             'bulgarian': 'Още'
         },
-        
-    }
 
+    },
 });
+
+var userLanguage = $.cookie('userLanguage');
+if (typeof userLanguage !== 'undefined') {
+    $('#selectLanguageDropdown').localizationTool('translate', userLanguage);
+}
+$('body').show();
+
+function updateQueryStringParameter(uri, key, value) {
+    var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+    if (uri.match(re)) {
+        return uri.replace(re, '$1' + key + "=" + value + '$2');
+    } else {
+        return uri + separator + key + "=" + value;
+    }
+}

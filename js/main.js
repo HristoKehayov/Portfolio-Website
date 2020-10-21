@@ -15,9 +15,13 @@ $(document).ready(function ($) {
 		hideDistantElements: false,
 		scrollProperty: 'scroll'
 	});
+	/*=============================*/
+
 
 	// Scrollax
 	$.Scrollax();
+	/*=============================*/
+
 
 	// loader
 	var loader = function () {
@@ -28,6 +32,8 @@ $(document).ready(function ($) {
 		}, 1);
 	};
 	loader();
+	/*=============================*/
+
 
 	// carousel
 	var carousel = function () {
@@ -59,6 +65,8 @@ $(document).ready(function ($) {
 		});
 	};
 	carousel();
+	/*=============================*/
+
 
 	// fullHeight
 	var fullHeight = function () {
@@ -70,6 +78,8 @@ $(document).ready(function ($) {
 
 	};
 	fullHeight();
+	/*=============================*/
+
 
 	// burgerMenu (hidden top menu toggle)
 	var burgerMenu = function () {
@@ -88,6 +98,8 @@ $(document).ready(function ($) {
 		})
 	};
 	burgerMenu();
+	/*=============================*/
+
 
 	// counter (animate fun facts number)
 	var counter = function () {
@@ -115,6 +127,8 @@ $(document).ready(function ($) {
 
 	}
 	counter();
+	/*=============================*/
+	
 
 	// contentWayPoint animation trigger
 	var contentWayPoint = function () {
@@ -154,6 +168,7 @@ $(document).ready(function ($) {
 		});
 	};
 	contentWayPoint();
+	/*=============================*/
 
 
 	// magnific popup
@@ -176,6 +191,8 @@ $(document).ready(function ($) {
 			duration: 300 // don't foget to change the duration also in CSS
 		}
 	});
+	/*=============================*/
+
 
 	// popup's
 	$('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
@@ -187,6 +204,8 @@ $(document).ready(function ($) {
 
 		fixedContentPos: false
 	});
+	/*=============================*/
+
 
 	// datepicker
 	$('#appointment_date').datepicker({
@@ -194,6 +213,8 @@ $(document).ready(function ($) {
 		'autoclose': true
 	});
 	$('#appointment_time').timepicker();
+	/*=============================*/
+
 
 	// pageProgress (loader)
 	var pageProgress = function () {
@@ -209,6 +230,8 @@ $(document).ready(function ($) {
 
 	};
 	pageProgress();
+	/*=============================*/
+
 
 	// Back to top button
 	$(window).scroll(function () {
@@ -224,6 +247,8 @@ $(document).ready(function ($) {
 		}, "slow");
 		return false;
 	});
+	/*=============================*/
+
 
 	// Zoom in Project Thumbnail Photo
 	$("a").click(function () {
@@ -237,6 +262,8 @@ $(document).ready(function ($) {
 			$('#imagemodal').modal('show');
 		}
 	});
+	/*=============================*/
+
 
 	// Skills Progress bar animation
 	var skillsProgressBarsAnim = function () {
@@ -262,6 +289,8 @@ $(document).ready(function ($) {
 
 	}
 	skillsProgressBarsAnim();
+	/*=============================*/
+
 
 	//Send Email
 	$('#sendEmail').click(function () {
@@ -278,8 +307,7 @@ $(document).ready(function ($) {
 				text: 'Some of the fields are empty!',
 				footer: '<a href>Why do I have this issue?</a>'
 			})
-		}
-		else if (requiredEmailChars.test(formEmail)) {
+		} else if (requiredEmailChars.test(formEmail)) {
 			Email.send({
 				Host: "smtp.gmail.com",
 				Username: "hikponss@gmail.com",
@@ -297,21 +325,19 @@ $(document).ready(function ($) {
 					if (result.isConfirmed) {
 						let timerInterval
 						Swal.fire({
-						  title: 'Thank you \nfor contacting me!',
-						  icon: 'info',
-						  html: 'I will make sure to get back to you as soon as possible!',
-						  showCloseButton: true,
-						  focusConfirm: false,
-						  confirmButtonText:
-							'<i class="icon icon-thumbs-up"></i> Great!',
-						  confirmButtonAriaLabel: 'Thumbs up, great!',
+							title: 'Thank you \nfor contacting me!',
+							icon: 'info',
+							html: 'I will make sure to get back to you as soon as possible!',
+							showCloseButton: true,
+							focusConfirm: false,
+							confirmButtonText: '<i class="icon icon-thumbs-up"></i> Great!',
+							confirmButtonAriaLabel: 'Thumbs up, great!',
 						}).then((result) => {
-						  /* Read more about handling dismissals below */
-						  if (result.dismiss === Swal.DismissReason.timer) {
-						  } else{
-							  $('#sendEmailForm').trigger("reset");
-							  location.reload();
-						  }
+							/* Read more about handling dismissals below */
+							if (result.dismiss === Swal.DismissReason.timer) {} else {
+								$('#sendEmailForm').trigger("reset");
+								location.reload();
+							}
 						})
 					}
 				})
@@ -325,6 +351,27 @@ $(document).ready(function ($) {
 			})
 		}
 	});
+	/*=============================*/
+
+	/*--==========================
+	  COOKIE CONSENT
+	============================*/
+	var cookieConsent = function(){
+		var userLanguage = $.cookie('userLanguage');
+		if (typeof userLanguage !== 'undefined') {
+			// user accepted cookie consent
+			return;
+		}else{
+			setTimeout(function () {
+				$("#cookieConsent").fadeIn(200);
+				$("#cookieConsent").css("display", "inline-table")
+			 }, 4000);
+			$("#closeCookieConsent, .cookieConsentOK").click(function() {
+				$("#cookieConsent").fadeOut(200);
+				$.cookie('cookieConsent', 'accepted');
+			}); 
+		}
+	}
+	cookieConsent();
+	/*=============================*/
 });
-
-

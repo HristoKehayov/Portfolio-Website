@@ -759,20 +759,44 @@
 .flag.flag-zw {
   background-position: -176px -165px;
 }
+
+/*--==========================
+  LOCALIZATION TOOL MAIN
+============================*/
+.localizationTool {
+  color: #333333;
+  background: transparent;
+  position: relative;
+  padding: 0 !important;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+ border-radius: 20px; 
+}
+
 .localizationTool:hover {
   cursor: pointer;
   cursor: hand;
 }
-.localizationTool.ltool-is-visible ul {
-  display: block;
-  float: left;
-  position: absolute;
-  width: 100%;
-  list-style-type: none;
-}
-.localizationTool.ltool-is-visible .ltool-dropdown-label-arrow {
-  /* the arrow */
 
+.localizationTool_PosFix{
+  float: right;
+  z-index: 1003;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0px;
+  margin-top: 0;
+  margin-right: 20px;
+  margin-left: 40px;
+}
+/*=============================*/
+
+
+/*--==========================
+  ARROW
+============================*/
+/* .localizationTool.ltool-is-visible .ltool-dropdown-label-arrow {
   content: '';
   display: block;
   width: 0;
@@ -785,28 +809,7 @@
   right: 8px;
   top: 7px;
 }
-.localizationTool {
-  color: #333333;
-  background: #8dc1e2;
-  position: relative;
-}
-.localizationTool .ltool-dropdown-label {
-  display: block;
-  padding: 12px 0 12px 12px;
-  color: #FFF;
-  border: 0;
-  position: relative;
-}
-.localizationTool .ltool-dropdown-label img,
-.localizationTool .ltool-dropdown-label .ltool-language-flag {
-  margin-left: 0;
-}
-.localizationTool .ltool-dropdown-label .ltool-language-name {
-  color: #deedf7;
-}
 .localizationTool .ltool-dropdown-label-arrow {
-  /* the arrow */
-
   content: '';
   display: block;
   width: 0;
@@ -818,40 +821,125 @@
   position: absolute;
   right: 8px;
   top: 17px;
+} */
+/*=============================*/
+
+
+/*--==========================
+  LOCALIZATION TOOL INSIDE DIV
+============================*/
+.localizationTool .ltool-dropdown-label {
+  display: flex;
+  padding: 8px 15px 8px 12px;
+  color: #FFF;
+  border: 2px solid #2c2c2c;
+  background-color: transparent;
+  position: relative;
+  align-items: flex-start;
+  align-content: flex-start;
 }
-.localizationTool img,
-.localizationTool div {
-  display: inline;
+
+.localizationTool .ltool-dropdown-label:hover {
+  border: 2px solid #007bff;
+  background-color: transparent;
 }
-.localizationTool li {
-  display: block;
-  background: #deedf7;
-  padding: 5px;
+
+.localizationTool .ltool-dropdown-label .ltool-language-name {
+  color: white;
 }
-.localizationTool li.ltool-is-selected {
-  background: #f5f1d6;
+/*=============================*/
+
+
+/*--==========================
+  LOCALIZATION TOOL IMG/FLAG/NAME
+============================*/
+.localizationTool .ltool-dropdown-label img,
+.localizationTool .ltool-dropdown-label .ltool-language-flag {
+  margin-left: 0;
+  display: flex;
+  align-self: center;
+  scale: 1.5;
 }
-.localizationTool li:hover {
-  background: #f5f1d6;
-}
-.localizationTool img {
-  width: 16px;
-  height: 11px;
-}
-.localizationTool .ltool-language-name {
-  color: #8dc1e2;
-}
+
 .localizationTool .ltool-language-flag {
   display: block;
   float: left;
   margin-top: 3px;
 }
+
 .localizationTool .ltool-language-flag,
 .localizationTool .ltool-language-countryname {
   margin-left: 8px;
 }
+/*=============================*/
+
+
+/*--==========================
+  LOCALIZATION TOOL DROPDOWN ITEMS
+============================*/
 .localizationTool ul {
   margin: 0;
   padding: 0;
   display: none;
 }
+
+.localizationTool.ltool-is-visible ul {
+  display: block;
+  float: left;
+  position: absolute;
+  width: 100%;
+  list-style-type: none;
+}
+
+.localizationTool li {
+  display: block;
+  /* background: #121212; */
+  padding: 5px;
+  border: 1px solid #2c2c2c;
+}
+
+.localizationTool li:hover {
+  /* background: #f5f1d6; */
+  color: #007bff !important;
+  border: 1px solid #007bff;
+  background-color: transparent;
+  
+}
+
+/* flag size */
+.localizationTool img {
+  width: 16px;
+  height: 11px;
+  scale: 1.5;
+}
+
+.localizationTool img,
+.localizationTool div {
+  display: inline;
+}
+
+/* country color */
+.localizationTool .ltool-language-name {
+  color: white;
+}
+/*=============================*/
+
+
+/*--==========================
+  SELECTED LANGUAGE
+============================*/
+.localizationTool li.ltool-is-selected {
+  /* background: #f5f1d6; */
+  background-color: #007bff;
+  /* border-color: white; */
+  /* border-color: #ff0000; */
+  border: 1px solid #007bff;
+}
+.localizationTool li.ltool-is-selected:hover {
+  /* background: #f5f1d6; */
+  background-color: transparent;
+  /* border-color: white; */
+  /* border-color: #ff0000; */
+  border: 1px solid #007bff;
+}
+/*=============================*/

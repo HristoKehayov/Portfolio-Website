@@ -10700,6 +10700,7 @@ h5,
   color: white;
   padding: 5px 0;
 }
+
 #colorlib-main-nav ul li div a.langSVG {
   /* display: block; */
   display: inline;
@@ -12522,7 +12523,9 @@ textarea.form-control {
   font-style: italic;
 }
 
-/* Back to top button */
+/*--==========================
+  BACK TO TOP BUTTON
+============================*/
 .back-to-top {
   display: none;
   position: fixed;
@@ -12549,9 +12552,12 @@ textarea.form-control {
   cursor: pointer;
   background-color: #333;
 }
+
 /*=============================*/
 
-/* Tags visuals */
+/*--==========================
+  TAGS BELOW EVERY PROJECT
+============================*/
 .tags li {
   list-style: none;
   margin: 0 10px 0 0;
@@ -12580,8 +12586,12 @@ textarea.form-control {
 .tags li span i:hover {
   color: #ffffff;
 }
+
 /*=============================*/
 
+/*--==========================
+  LOADER BEFORE PAGE LOADS
+============================*/
 #ftco-loader {
   position: fixed;
   width: 96px;
@@ -12646,15 +12656,24 @@ textarea.form-control {
   stroke-linecap: round;
 }
 
+/*=============================*/
 
-/* Header Vertical Line */
+
+/*--==========================
+  HEADER VERTICLE LINE
+============================*/
 .verticleLine {
   margin-right: 6px;
   background-color: #007bff;
   width: 6px;
 }
 
-/* Center elemets verticaly horizontaly */
+/*=============================*/
+
+
+/*--==========================
+  Center elemets verticaly horizontaly
+============================*/
 .centerElement {
   margin: 0;
   position: absolute;
@@ -12664,16 +12683,22 @@ textarea.form-control {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
 /*=============================*/
 
-/* Position for get in touch image in contact page */
+
+/*--==========================
+  CONTACT ME PAGE IMAGE
+============================*/
 .contactPage-Img {
   position: absolute;
 }
+
 /*=============================*/
 
+
 /*--==========================
-  navbar dropdown language verticle line
+  navbar dropdown verticle line
 ============================*/
 .vl {
   border-left: 2px solid #666666;
@@ -12681,8 +12706,13 @@ textarea.form-control {
   position: absolute;
   top: 0;
 }
+
 /*=============================*/
 
+
+/*--==========================
+  PORTFOLIO PROJECT THUMBNAIL
+============================*/
 .modal-dialog {
   width: 98%;
   height: 92%;
@@ -12698,6 +12728,73 @@ textarea.form-control {
   display: flex;
 }
 
+/*=============================*/
+
+/*--==========================
+  COOKIE BANNER
+============================*/
+#cookieConsent {
+  background-color: rgba(20,20,20,0.8);
+  min-height: 26px;
+  font-size: 14px;
+  color: #ccc;
+  line-height: 26px;
+  padding: 8px 0 8px 30px;
+  font-family: "Trebuchet MS",Helvetica,sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 9999;
+  border: 1px solid #2c2c2c;
+}
+#cookieConsent a {
+  color: #4B8EE7;
+  text-decoration: none;
+}
+#closeCookieConsent {
+  float: right;
+  display: inline-block;
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: -10px 5px 0px 0px;
+  font-weight: bold;
+}
+#closeCookieConsent:hover {
+  color: #FFF;
+}
+#cookieConsent a.cookieConsentOK {
+  background-color: transparent;
+  border: 1px solid #007bff;
+  color: white;
+  display: inline-block;
+  border-radius: 5px;
+  padding: 0 20px;
+  cursor: pointer;
+  float: right;
+  margin: 0 60px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+  background-color: #007bff;
+  border: 1px solid #2c2c2c;
+}
+/*Cookie Consent End*/
+
+/*=============================*/
+/*--==========================
+  COOKIE BANNER
+============================*/
+.hiddenNavBar:hover{
+  text-shadow: 0 2px 8px #007bff;
+}
+/*=============================*/
+
+
+/*--==========================
+  KEYFRAMES
+============================*/
 @-webkit-keyframes loader-rotate {
   100% {
     -webkit-transform: rotate(360deg);
