@@ -48,16 +48,15 @@
     ============================-->
     <nav id="colorlib-main-nav" role="navigation">
       <a href="#" id="closeNavBar" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
-      <a href="#" id="closeNavBar" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
         <div class="img" style="background-image: url(../images/author_0.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Hristo Kehayov</a></h1>
-              <ul>
-                <li class="active"><a href="../public/index.html"><span><small>01</small><navbarEl class="hiddenNavBar" id="navbarEl-Home">Home</navbarEl></span></a></li>
-                <li><a href="../public/resume.html"><span><small>02</small><navbarEl class="hiddenNavBar" id="navbarEl-Resume">Resume</navbarEl></span></a></li>
+              <h1 class="mb-4"><a id="headerImageLink" href="../public/index.html" class="logo">Hristo Kehayov</a></h1>
+              <ul class="navBarList">
+                <li class="navBarList-Li active"><a href="../public/index.html"><span><small>01</small><navbarEl class="hiddenNavBar" id="navbarEl-Home">Home</navbarEl></span></a></li>
+                <li><a class="navBarList-a" href="../public/resume.html"><span><small>02</small><navbarEl class="hiddenNavBar" id="navbarEl-Resume">Resume</navbarEl></span></a></li>
                 <li><a href="../public/services.html"><span><small>03</small><navbarEl class="hiddenNavBar" id="navbarEl-Services">Services</navbarEl></span></a></li>
                 <li><a href="../public/portfolio.html"><span><small>04</small><navbarEl class="hiddenNavBar" id="navbarEl-Portfolio">Portfolio</navbarEl></span></a></li>
                 <li><a href="../public/blog.html"><span><small>05</small><navbarEl class="hiddenNavBar" id="navbarEl-Blog">Blog</navbarEl></span></a></li>
@@ -161,9 +160,9 @@
                 <h1 class="bold-text">About</h1>
                 <div class="p-5">
                   <center>
-                    <h2 class="mb-5">My name is <br>Hristo Kehayov</h2>
+                    <h2 class="mb-5"><juststring id="mynameis">My name is</juststring><br><juststring>Hristo Kehayov</juststring></h2>
                   </center>
-                  <p>
+                  <p id="moreAboutMe">
                     I have been programming since i was about 10 years old.
                     At 14 i wrote my first game in the programming languege lua. Since then I have never stopped.
                     I love being creative and organized person.
@@ -215,7 +214,7 @@
                   <h3 class="heading">PC Game Development</h3>
                   <h3 class="heading">Mobile Game Development</h3>
                   <!-- <h3 class="heading"></h3> -->
-                  <span style="font-size: medium;">
+                  <span id="PC_Mobile_Desc" style="font-size: medium;">
                     Developing memorable and unique mobile android, ios and video games.
                     From all of its logic to a finished project.
                   </span>
@@ -230,7 +229,7 @@
                   <h3 class="heading">Android Application</h3>
                   <h3 class="heading">IOS Application</h3>
                   <h3 class="heading">Windows Form/XML Application</h3>
-                  <span style="font-size: medium;">
+                  <span id="Android_IOS_Desc" style="font-size: medium;">
                     Games, playing music, handle network transactions, interacting content etc.
                   </span>
                 </div>
@@ -244,7 +243,7 @@
                   <h3 class="heading">HTML/CSS</h3>
                   <h3 class="heading">Prototyping</h3>
                   <h3 class="heading">User Testing</h3>
-                  <span style="font-size: medium;">
+                  <span id='html_css_Desc' style="font-size: medium;">
                     Modern and mobile-ready website that will help you reach all of your marketing.
                   </span>
                 </div>
@@ -278,11 +277,11 @@
                 </div>
               </a>
               <div class="text">
-                <h4 class="subheading">Games</h4>
+                <h4 id="titleIdPortfolio" class="subheading">Games</h4>
                 <h2 class="heading"><a href="#projectTitle"></a>
                   Rangers of the Dungeon
                 </h2>
-                <p>
+                <p id="project1_Desc">
                   written on C# in the Unity3D
                   engine environment. It is a Fast-pace fun mobile rpg game
                   about collecting loot, killing bosses and gearing up.
@@ -317,7 +316,7 @@
                 <h4 class="subheading">Games</h4>
                 <h2 class="heading"><a href="portfoli-singleo.html">Ping Pong Game Simulator</a>
                 </h2>
-                <p>
+                <p id="project2_Desc">
                   Enjoy the classic memories of playing ping pong and live those joyful moments of childhood all over
                   again.
                   Control paddle of your side and avoid the ball from getting hit with the wall behind.
@@ -350,7 +349,7 @@
                 <h4 class="subheading">Applications</h4>
                 <h2 class="heading"><a href="portfolio-single.html">GameBooster (console based game booster)</a>
                 </h2>
-                <p>
+                <p id="project3_Desc">
                   Game Booster written on Pure C++ in Visual Studio IDE.
                   It is simple program that clears the temporary files from your
                   system and changes battery mode to performance mode.
@@ -384,7 +383,7 @@
                 <h4 class="subheading">Web Applications</h4>
                 <h2 class="heading"><a href="portfoli-singleo.html">ParkIn</a>
                 </h2>
-                <p>
+                <p id="project4_Desc">
                   Project ParkIn written on MVC Structure. Its base idea is to
                   make it possible to rent your park place when you don’t
                   use it. (unfinished)
@@ -421,7 +420,7 @@
                 <h4 class="subheading">Applications</h4>
                 <h2 class="heading"><a href="portfoli-singleo.html">LinkedIn Connection Grinnder</a>
                 </h2>
-                <p>
+                <p id="project5_Desc"> 
                   A simple bot about sending automated connection messages to your network. Written in pure Python with
                   the help
                   of the Selenium automating browser
@@ -455,10 +454,11 @@
                 <h4 class="subheading">Education</h4>
                 <h2 class="heading"><a href="portfoli-singleo.html">Software Technologies Edu</a>
                 </h2>
-                <p>This is all of my past education courses and seminars in
+                <p>
+                  <juststring id="project6_Desc_A" >This is all of my past education courses and seminars in</juststring>
                   <a href="https://softuni.bg/" target="_blank">softuni</a>.
-                  It consist of all of my homeworks and
-                  past courses and its materials.
+                  <juststring id="project6_Desc_B" >It consist of all of my homeworks and
+                  past courses and its materials.</juststring>
                 </p>
                 <ul class="tags list-unstyled mt-4">
                   <li>tags:</li>
@@ -672,6 +672,7 @@
   <script src="../lib/localization/js/jquery.localizationTool.js"></script>
   <script src="../js/localization/index.js"></script>
   <!-- #end-localization -->
+
   <script src="../js/main.js"></script>
 
 </body>

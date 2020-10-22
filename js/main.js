@@ -3,6 +3,24 @@ AOS.init({
 	easing: 'slide'
 });
 
+// $(window).load(function () {
+// 	debugger;
+// 	//save info somewhere
+// 	var userLanguageCookie = $.cookie('userLanguage');
+
+// 	if (typeof userLanguageCookie !== 'undefined') {
+// 		//user accepted Cookie Collect Consent
+// 		var newUrl = updateQueryStringParameter(window.location.href, 'lang', languageCode);
+// 		window.history.pushState("", "", newUrl);
+
+
+// 		$('#selectLanguageDropdown').localizationTool('translate', queryLanguage??userLanguageCookie);
+// 		$('body').show();
+// 	}
+// 	debugger;
+
+// 	//return 'are you sure you want to leave?';
+// });
 
 $(document).ready(function ($) {
 
@@ -357,8 +375,8 @@ $(document).ready(function ($) {
 	  COOKIE CONSENT
 	============================*/
 	var cookieConsent = function(){
-		var userLanguage = $.cookie('userLanguage');
-		if (typeof userLanguage !== 'undefined') {
+		var cookieConsent = $.cookie('cookieConsent');
+		if (typeof cookieConsent !== 'undefined') {
 			// user accepted cookie consent
 			return;
 		}else{
@@ -373,5 +391,16 @@ $(document).ready(function ($) {
 		}
 	}
 	cookieConsent();
-	/*=============================*/
+	/*=============================*/	
 });
+
+
+function updateQueryStringParameter(uri, key, value) {
+    var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+    if (uri.match(re)) {
+        return uri.replace(re, '$1' + key + "=" + value + '$2');
+    } else {
+        return uri + separator + key + "=" + value;
+    }
+}
