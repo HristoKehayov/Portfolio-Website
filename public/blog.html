@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <title>Portfolio Website</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link href="../images/logo4.png" rel="icon">
-
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
-
-  <link rel="stylesheet" href="../lib/animate/animate.css">
-  <link rel="stylesheet" href="../lib/animate/magnific-popup.css">
-  <link rel="stylesheet" href="../lib/owlcarousel/css/owl.carousel.min.css">
-  <link rel="stylesheet" href="../lib/owlcarousel/css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="../lib/aos/css/aos.css">
-  <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-datepicker.css">
-
-  <link rel="stylesheet" href="../lib/jquery/css/jquery.timepicker.css">
-
-  <link rel="stylesheet" href="../fonts/open-iconic/open-iconic-bootstrap.min.css">
-  <link rel="stylesheet" href="../fonts/ionicons/ionicons.min.css">
-  <link rel="stylesheet" href="../fonts/flaticon.css">
-  <link rel="stylesheet" href="../fonts/icomoon/icomoon.css">
-  <link rel="stylesheet" href="../fonts/devicon/devicon.css">
-
-
-  <link rel="stylesheet" href="../css/style.css">
-</head>
+  <head>
+    <title>Portfolio Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+    <link href="../images/logo4.png" rel="icon">
+  
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,700" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../lib/localization/css/jquery.localizationTool.css">
+    
+    <link rel="stylesheet" href="../lib/animate/animate.css">
+    <link rel="stylesheet" href="../lib/animate/magnific-popup.css">
+    <link rel="stylesheet" href="../lib/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../lib/owlcarousel/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../lib/aos/css/aos.css">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap-datepicker.css">
+  
+    <link rel="stylesheet" href="../lib/jquery/css/jquery.timepicker.css">
+  
+    <link rel="stylesheet" href="../fonts/open-iconic/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="../fonts/ionicons/ionicons.min.css">
+    <link rel="stylesheet" href="../fonts/flaticon.css">
+    <link rel="stylesheet" href="../fonts/icomoon/icomoon.css">
+    <link rel="stylesheet" href="../fonts/devicon/devicon.css">
+  
+  
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
 
 <body>
 
@@ -45,20 +47,20 @@
       Hidden Navigation Menu
     ============================-->
     <nav id="colorlib-main-nav" role="navigation">
-      <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
+      <a href="#" id="closeNavBar" class="js-colorlib-nav-toggle colorlib-nav-toggle active"><i></i></a>
       <div class="js-fullheight colorlib-table">
         <div class="img" style="background-image: url(../images/author_0.jpg);"></div>
         <div class="colorlib-table-cell js-fullheight">
           <div class="row no-gutters">
             <div class="col-md-12 text-center">
-              <h1 class="mb-4"><a href="index.html" class="logo">Hristo Kehayov</a></h1>
-              <ul>
-                <li><a href="index.html"><span><small>01</small>Home</span></a></li>
-                <li><a href="resume.html"><span><small>02</small>Resume</span></a></li>
-                <li><a href="services.html"><span><small>03</small>Services</span></a></li>
-                <li><a href="portfolio.html"><span><small>04</small>Portfolio</span></a></li>
-                <li class="active"><a href="blog.html"><span><small>05</small>Blog</span></a></li>
-                <li><a href="contact.html"><span><small>06</small>Contact</span></a></li>
+              <h1 class="mb-4"><a id="headerImageLink" href="../public/index.html" class="logo">Hristo Kehayov</a></h1>
+              <ul class="navBarList">
+                <li><a href="../public/index.html"><span><small>01</small><navbarEl class="hiddenNavBar" id="navbarEl-Home">Home</navbarEl></span></a></li>
+                <li><a href="../public/resume.html"><span><small>02</small><navbarEl class="hiddenNavBar" id="navbarEl-Resume">Resume</navbarEl></span></a></li>
+                <li><a href="../public/services.html"><span><small>03</small><navbarEl class="hiddenNavBar" id="navbarEl-Services">Services</navbarEl></span></a></li>
+                <li><a href="../public/portfolio.html"><span><small>04</small><navbarEl class="hiddenNavBar" id="navbarEl-Portfolio">Portfolio</navbarEl></span></a></li>
+                <li class="active"><a href="../public/blog.html"><span><small>05</small><navbarEl class="hiddenNavBar" id="navbarEl-Blog">Blog</navbarEl></span></a></li>
+                <li><a href="../public/contact.html"><span><small>06</small><navbarEl class="hiddenNavBar" id="navbarEl-Contact">Contact</navbarEl></span></a></li>
               </ul>
             </div>
           </div>
@@ -86,11 +88,17 @@
                   HK
                 </a>
               </div>
-              <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
+              <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>  
+              <!--==========================
+                Localization Tool Widgit
+                ============================-->
+              <a class="localizationTool_PosFix"><div id="selectLanguageDropdown" class="localizationTool"></div></a>           
+              <!-- #localization-tool-widgit -->
             </div>
           </div>
         </div>
       </header><!-- #end-header -->
+
 
       <section class="ftco-section">
         <div class="container mt-5">
@@ -219,16 +227,22 @@
             <div class="col-md-5 text-center">
               <div class="ftco-footer-widget mb-5">
                 <ul class="ftco-footer-social list-unstyled">
-                  <li><a href="https://www.facebook.com/Hikponss" class="footerLink" target="_blank"><span class="icon-facebook"></span></a></li>
-                  <li><a href="https://twitter.com/hikponss" class="footerLink" target="_blank"><span class="icon-twitter"></span></a></li>
-                  <li><a href="https://www.instagram.com/hikponss/" class="footerLink" target="_blank"><span class="icon-instagram"></span></a></li>
-                  <li><a href="https://github.com/HristoKehayov" class="footerLink" target="_blank"><span class="icon-github"></span></a></li>
-                  <li><a href="https://www.linkedin.com/in/hristo-kehayov-315700183/" class="footerLink" target="_blank"><span class="icon-linkedin"></span></a></li>
+                  <li><a href="https://www.facebook.com/Hikponss" class="footerLink" target="_blank"><span
+                        class="icon-facebook"></span></a></li>
+                  <li><a href="https://twitter.com/hikponss" class="footerLink" target="_blank"><span
+                        class="icon-twitter"></span></a></li>
+                  <li><a href="https://www.instagram.com/hikponss/" class="footerLink" target="_blank"><span
+                        class="icon-instagram"></span></a></li>
+                  <li><a href="https://github.com/HristoKehayov" class="footerLink" target="_blank"><span
+                        class="icon-github"></span></a></li>
+                  <li><a href="https://www.linkedin.com/in/hristo-kehayov-315700183/" class="footerLink"
+                      target="_blank"><span class="icon-linkedin"></span></a></li>
                 </ul>
               </div>
               <div class="ftco-footer-widget">
                 <h2 class="mb-3">Contact Me</h2>
-                <p class="h3 email"><a href="mailto:hikponss@gmail.com" class="footerLink" target="_blank">hikponss@gmail.com</a></p>
+                <p class="h3 email"><a href="mailto:hikponss@gmail.com" class="footerLink"
+                    target="_blank">hikponss@gmail.com</a></p>
               </div>
             </div>
           </div>
@@ -236,18 +250,22 @@
             <div class="col-md-12 text-center">
               <p>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script> All rights reserved
-                <br>Template design by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <juststring id="copyright">
+                  Copyright
+                </juststring> &copy;
+                <script> document.write(new Date().getFullYear()); </script> <juststring id="rightsReserved">All rights reserved</juststring>
+                <br><juststring id="templateDesignBy">Template design by</juststring><a href="https://colorlib.com" target="_blank"> Colorlib</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
             </div>
           </div>
         </div>
 
+        <!--==========================
+          Back to Top Button
+        ============================-->
         <a href="#top" class="back-to-top"><i class="icon-arrow-up centerElement"></i></a>
+        <!-- #end-back-to-top-button -->
 
       </footer><!-- #end-footer -->
 
@@ -273,12 +291,28 @@
   <script src="../lib/jquery/js/jquery.animateNumber.min.js"></script>
   <script src="../lib/jquery/js/jquery.timepicker.min.js"></script>
   <script src="../lib/jquery/js/jquery.magnific-popup.min.js"></script>
+  <script src="../lib/jquery/js/jquery.cookie.js"></script>
+
+  <script src="../lib/scroll/popper.min.js"></script>
+
   <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
   <script src="../lib/bootstrap/js/bootstrap-datepicker.js"></script>
-  <script src="../lib/scroll/popper.min.js"></script>
+
   <script src="../lib/owlcarousel/js/owl.carousel.min.js"></script>
+
   <script src="../lib/aos/js/aos.js"></script>
+  
   <script src="../lib/scroll/scrollax.min.js"></script>
+
+
+
+  <!--==========================
+    Localization
+  ============================-->
+  <script src="../lib/localization/js/jquery.localizationTool.js"></script>
+  <script src="../js/localization/index.js"></script>
+  <!-- #end-localization -->
+
   <script src="../js/main.js"></script>
 
 </body>
