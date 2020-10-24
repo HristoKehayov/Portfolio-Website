@@ -123,7 +123,6 @@ $('#selectLanguageDropdown').localizationTool({
         //--=============================
         //  ABOUT SECTION
         //===============================--//
-
         'About': {
             'german': 'Über',
             'bulgarian': 'За'
@@ -152,13 +151,11 @@ $('#selectLanguageDropdown').localizationTool({
             'german': 'Email: hikponss@gmail.com',
             'bulgarian': 'E-Поща: hikponss@gmail.com'
         },
-
         /*=============================*/
 
         //--=============================
         //  SERVICES
         //===============================--//
-
         'What i do': {
             'german': 'Was mache ich',
             'bulgarian': 'Какво правя'
@@ -211,13 +208,11 @@ $('#selectLanguageDropdown').localizationTool({
             'german': 'Moderne und mobile Website, mit der Sie Ihr gesamtes Marketing erreichen können.',
             'bulgarian': 'Модерен и готов за мобилни устройства уебсайт, който ще ви помогне да достигнете до целия си маркетинг.'
         },
-        
         /*=============================*/
 
         //--=============================
         //  PORTFOLIO
         //===============================--//
-
         'Portfolio': {
             'german': 'Portfolio',
             'bulgarian': 'Портфолио'
@@ -233,7 +228,7 @@ $('#selectLanguageDropdown').localizationTool({
             'bulgarian': 'Игри'
         },
         'id:project1_Desc': {
-            'german': 'geschrieben auf C # in der Unity3D-Engine-Umgebung. Es ist ein schnelles, lustiges mobiles RPG-Spiel, in dem es darum geht, Beute zu sammeln, Bosse zu töten und sich vorzubereiten.',
+            'german': 'Geschrieben auf C # in der Unity3D-Engine-Umgebung. Es ist ein schnelles, lustiges mobiles RPG-Spiel, in dem es darum geht, Beute zu sammeln, Bosse zu töten und sich vorzubereiten.',
             'bulgarian': 'написано на C # в Unity3D двигателната среда. Това е бърза забавна мобилна RPG игра за събиране на плячка, убиване на шефове и подготовка.'
         },
         'id:project2_Desc': {
@@ -272,10 +267,73 @@ $('#selectLanguageDropdown').localizationTool({
             'german': 'Schließen',
             'bulgarian': 'Затвори'
         },
+        /*=============================*/
         
+        //--=============================
+        //  ACHIEVEMENTS
+        //===============================--//
+        'I love to share my achievements': {
+            'german': 'Ich liebe es, meine Erfolge zu teilen',
+            'bulgarian': 'Обичам да споделям постиженията си'
+        },
+        'Lines of code written': {
+            'german': 'Codezeilen geschrieben',
+            'bulgarian': 'Написани редове от код'
+        },
 
+        'Cups of coffee': {
+            'german': 'Tassen Kaffee',
+            'bulgarian': 'Чаши кафе'
+        },
+        'Projects done': {
+            'german': 'Projekte abgeschlossen',
+            'bulgarian': 'Извършени проекти'
+        },
         /*=============================*/
 
+        //--=============================
+        //  CONTACT ME
+        //===============================--//
+        'Contact Me': {
+            'german': 'Kontaktiere mich',
+            'bulgarian': 'Свържи се с мен'
+        },
+        /*=============================*/
+
+
+        //--=============================
+        //  COPYRIGHT
+        //===============================--//
+        'id:templateDesignBy': {
+            'german': 'Template Design von',
+            'bulgarian': 'Дизайн на шаблон от'
+        },
+        'id:rightsReserved': {
+            'german': 'Alle Rechte vorbehalten',
+            'bulgarian': 'Всички права запазени'
+        },
+        'id:copyright': {
+            'german': 'Urheberrechte',
+            'bulgarian': 'Авторско право'
+        },
+        /*=============================*/
+
+        //--=============================
+        //  COOKIE CONSENT
+        //===============================--/
+        'id:cookieConsentText':{
+            'german': 'Diese Website verwendet Cookies.',
+            'bulgarian': 'Този уебсайт използва бисквитки.'
+        },
+        'More info':{
+            'german': 'Mehr Info',
+            'bulgarian': 'Повече информация'
+        },
+        'That\'s Fine':{
+            'german': 'Zustimment',
+            'bulgarian': 'Съгласен съм'
+        }
+        /*=============================*/
     },
 });
 

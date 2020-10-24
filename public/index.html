@@ -313,7 +313,7 @@
                 </div>
               </a>
               <div class="text order-1">
-                <h4 class="subheading">Games</h4>
+                <h4 id="titleIdPortfolio" class="subheading">Games</h4>
                 <h2 class="heading"><a href="portfoli-singleo.html">Ping Pong Game Simulator</a>
                 </h2>
                 <p id="project2_Desc">
@@ -571,11 +571,11 @@
             <div class="col-md-12 text-center">
               <p>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;
-                <script>
-                  document.write(new Date().getFullYear());
-                </script> All rights reserved
-                <br>Template design by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                <juststring id="copyright">
+                  Copyright
+                </juststring> &copy;
+                <script> document.write(new Date().getFullYear()); </script> <juststring id="rightsReserved">All rights reserved</juststring>
+                <br><juststring id="templateDesignBy">Template design by</juststring><a href="https://colorlib.com" target="_blank"> Colorlib</a>
                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
               </p>
             </div>
@@ -595,9 +595,11 @@
     ============================-->
     <div id="cookieConsent">
       <div id="closeCookieConsent">x</div>
-      This website is using cookies. 
-      <a href="https://www.google.com/search?q=HTTP-Cookie" target="_blank">More info</a>. <a class="cookieConsentOK">That's
-        Fine</a>
+      <juststring id="cookieConsentText">
+        This website is using cookies.
+      </juststring> 
+      <a href="https://www.google.com/search?q=HTTP-Cookie" target="_blank">More info</a>. 
+      <a class="cookieConsentOK">That's Fine</a>
     </div><!-- #end-cookie-consent -->
 
       <!--==========================
