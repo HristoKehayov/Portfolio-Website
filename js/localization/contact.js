@@ -64,6 +64,35 @@ $('#selectLanguageDropdown').localizationTool({
         //--=============================
         //  HIDDEN NAV BAR
         //===============================--//
+        'id:navbarEl-Home': {
+            'german': 'StartSeite',
+            'bulgarian': 'Начало'
+        },
+        'id:navbarEl-Resume': {
+            'german': 'Resümee',
+            'bulgarian': 'Резюме'
+        },
+        'id:navbarEl-Services': {
+            'german': 'Dienstleistungen',
+            'bulgarian': 'Услуги'
+        },
+        'id:navbarEl-Portfolio': {
+            'german': 'Portfolio',
+            'bulgarian': 'Портфолио'
+        },
+        'id:navbarEl-Blog': {
+            'german': 'Blog',
+            'bulgarian': 'Блог'
+        },
+        'id:navbarEl-Contact': {
+            'german': 'Kontakt',
+            'bulgarian': 'Контакт'
+        },
+        /*=============================*/
+
+        //--=============================
+        //  CONTACT INFORMATION
+        //===============================--//
         'Contact Information': {
             'german': 'Kontakt Informationen',
             'bulgarian': 'Контакт информация'
@@ -91,6 +120,33 @@ $('#selectLanguageDropdown').localizationTool({
         'Message': {
             'german': 'Nachricht',
             'bulgarian': 'Съобщение'
+        },
+        /*=============================*/
+
+        //--=============================
+        //  CONTACT ME
+        //===============================--//
+        'Contact Me': {
+            'german': 'Kontaktiere mich',
+            'bulgarian': 'Свържи се с мен'
+        },
+        /*=============================*/
+
+
+        //--=============================
+        //  COPYRIGHT
+        //===============================--//
+        'id:templateDesignBy': {
+            'german': 'Template Design von',
+            'bulgarian': 'Дизайн на шаблон от'
+        },
+        'id:rightsReserved': {
+            'german': 'Alle Rechte vorbehalten',
+            'bulgarian': 'Всички права запазени'
+        },
+        'id:copyright': {
+            'german': 'Urheberrechte',
+            'bulgarian': 'Авторско право'
         },
         /*=============================*/
     },
