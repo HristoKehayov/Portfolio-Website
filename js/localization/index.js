@@ -330,7 +330,7 @@ $('#selectLanguageDropdown').localizationTool({
             'bulgarian': 'Повече информация'
         },
         'That\'s Fine':{
-            'german': 'Zustimment',
+            'german': 'Zustimmen',
             'bulgarian': 'Съгласен съм'
         }
         /*=============================*/
