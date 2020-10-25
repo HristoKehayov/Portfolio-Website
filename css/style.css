@@ -12731,7 +12731,7 @@ textarea.form-control {
 /*=============================*/
 
 /*--==========================
-  COOKIE BANNER
+  COOKIE CONCENT BANNER
 ============================*/
 #cookieConsent {
   background-color: rgba(20,20,20,0.8);
@@ -12780,10 +12780,17 @@ textarea.form-control {
   background-color: #007bff;
   border: 1px solid #2c2c2c;
 }
-/*Cookie Consent End*/
-
 /*=============================*/
 
+/*--==========================
+  CONTACT ME PAGE OVERRIDE FORM CSS
+============================*/
+.contactmeForm {
+  max-width: 100%;
+  flex: 0 0 100%;
+}
+
+/*=============================*/
 
 /*--==========================
   KEYFRAMES

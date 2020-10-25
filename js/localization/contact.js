@@ -97,29 +97,46 @@ $('#selectLanguageDropdown').localizationTool({
             'german': 'Kontakt Informationen',
             'bulgarian': 'Контакт информация'
         },
-        'Address: ': {
-            'german': 'Adresse',
-            'bulgarian': 'Адрес'
+        'id:addresText': {
+            'german': 'Adresse: ',
+            'bulgarian': 'Адрес: ' 
         },
-        'Website': {
-            'german': 'Webseite',
-            'bulgarian': 'Уебсайт'
+        'id:adressContent': {
+            'german': '8010, Graz, Steiermark, Österreich',
+            'bulgarian': '8010, Грац, Щирия, Австрия'
+        },        
+        'Email:': {
+            'german': 'Email',
+            'bulgarian': 'Електронна поща'
+        },
+        'Website:': {
+            'german': 'Website: ',
+            'bulgarian': 'Уебсайт: '
         },
         'Your Name': {
+            'english': 'Your Name',
             'german': 'Dein Name',
             'bulgarian': 'Твоето име'
         },
         'Your Email': {
+            'english': 'Your Email',
             'german': 'Deine E-Mail',
             'bulgarian': 'Твоят имейл'
         },
         'Subject': {
+            'english': 'Subject',
             'german': 'Gegenstand',
             'bulgarian': 'Тема'
         },
         'Message': {
+            'english': 'Message',
             'german': 'Nachricht',
             'bulgarian': 'Съобщение'
+        },
+        'Send Message': {
+            'english': 'Send Message',
+            'german': 'Nachricht senden',
+            'bulgarian': 'Изпрати съобщение'
         },
         /*=============================*/
 
@@ -170,6 +187,24 @@ if (typeof cookieCollectConsent !== 'undefined') {
         queryLanguage = ''
     };
 }
+
+var yourName = $('#name').attr('placeholder');
+var yourEmail = $('#email').attr('placeholder');
+var subject = $('#subject').attr('placeholder');
+var message = $('#message').attr('placeholder');
+var sendMessage = $('#sendEmail').attr('value');
+
+var YN = $('#selectLanguageDropdown').localizationTool('translateString', yourName, setLangToTranslate());
+var YE = $('#selectLanguageDropdown').localizationTool('translateString', yourEmail, setLangToTranslate());
+var S = $('#selectLanguageDropdown').localizationTool('translateString', subject, setLangToTranslate());
+var M = $('#selectLanguageDropdown').localizationTool('translateString', message, setLangToTranslate());
+var SM = $('#selectLanguageDropdown').localizationTool('translateString', sendMessage, setLangToTranslate());
+
+$('#name').attr('placeholder', YN)
+$('#email').attr('placeholder', YE)
+$('#subject').attr('placeholder', S)
+$('#message').attr('placeholder', M)
+$('#sendEmail').attr('value', SM)
 
 $('#selectLanguageDropdown').localizationTool('translate', setLangToTranslate());
 $('body').show();

@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="../fonts/icomoon/icomoon.css">
     <link rel="stylesheet" href="../fonts/devicon/devicon.css">
   
+    <link rel="stylesheet" href="../lib/alerts/css/sweetalert2_dark.css">
   
     <link rel="stylesheet" href="../css/style.css">
   </head>
@@ -116,7 +117,10 @@
             <div class="w-100"></div>
 
             <div class="col-md-3">
-              <p><span>Address:</span> 8010, Graz, Styria, Austria </p>
+              <p><span id="addresText">Address:</span> 
+                <juststring id="adressContent">
+                  8010, Graz, Styria, Austria
+                </juststring> </p>
             </div>
 
             <!-- <div class="col-md-3">
@@ -134,7 +138,7 @@
           </div>
 
           <div class="row block-9">
-            <div class="col-md-6 pr-md-5">
+            <div class="contactmeForm col-md-6 pr-md-5">
 
               <form id="sendEmailForm" method="post" >
                 <div class="form-group">
@@ -157,7 +161,9 @@
               
             </div>
             <!-- <div class="col-md-6" id="map"></div> -->
-            <div><img class="contactPage-Img" src="../images/rsz_2contact-us-header.jpg" alt=""></div>
+            <!-- <div>
+              <img class="contactPage-Img" src="../images/rsz_2contact-us-header.jpg" alt="">
+            </div> -->
             
           </div>
         </div>
@@ -248,7 +254,9 @@
   
   <script src="../lib/scroll/scrollax.min.js"></script>
 
+  <script src="../lib/smtpjs/smtpjs.js"></script>
 
+  <script src="../lib/alerts/js/sweetalert2.min.js"></script>
 
   <!--==========================
     Localization
