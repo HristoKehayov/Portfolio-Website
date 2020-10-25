@@ -9,7 +9,7 @@ $('#selectLanguageDropdown').localizationTool({
             'countryTranslated': 'United States',
             'languageTranslated': 'English',
             'flag': {
-                'url': '../images/flags/us.svg'
+                'url': './images/flags/us.svg'
             }
         },
         'german': {
@@ -18,7 +18,7 @@ $('#selectLanguageDropdown').localizationTool({
             'countryTranslated': "Deutschland",
             'languageTranslated': "de",
             'flag': {
-                'url': '../images/flags/de.svg'
+                'url': './images/flags/de.svg'
             }
         },
         'bulgarian': {
@@ -27,7 +27,7 @@ $('#selectLanguageDropdown').localizationTool({
             'countryTranslated': "България",
             'languageTranslated': "бг",
             'flag': {
-                'url': '../images/flags/bg.svg'
+                'url': './images/flags/bg.svg'
             }
         },
     },
