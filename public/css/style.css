@@ -12551,7 +12551,12 @@ textarea.form-control {
   cursor: pointer;
   background-color: #333;
 }
+/* @media (min-width: 500px) {
 
+  .back-to-top {
+    margin: 30px;
+  }
+} */
 /*=============================*/
 
 /*--==========================
