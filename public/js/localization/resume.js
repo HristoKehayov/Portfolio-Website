@@ -139,26 +139,26 @@ $('#selectLanguageDropdown').localizationTool({
             'bulgarian': 'фрилансер роден в България, но установен в Австрия. Целя да направя разлика чрез моето творческо решение.'
         },
         'First Name:': {
-            'german': 'Vorname:',
-            'bulgarian': 'Първо име:'
+            'german': 'Vorname: ',
+            'bulgarian': 'Първо име: '
         },
         'Last Name:': {
-            'german': 'Nachname:',
-            'bulgarian': 'Фамилия:'
+            'german': 'Nachname: ',
+            'bulgarian': 'Фамилия: '
         },
-        'Age': {
+        'Age: ': {
             'german': 'Alter: ',
             'bulgarian': 'Възраст: '
         },
-        'Address:': {
+        'Address: ': {
             'german': 'Adresse: ',
             'bulgarian': 'Адрес: '
         },
-        'Technologies': {
+        'Technologies: ': {
             'german': 'Technologien: ',
             'bulgarian': 'Технологии: '
         },
-        'Professional Experience:': {
+        'Professional Experience: ': {
             'german': 'Berufserfahrung: ',
             'bulgarian': 'Професионален опит: '
         },
@@ -166,7 +166,7 @@ $('#selectLanguageDropdown').localizationTool({
             'german': 'Hobby: ',
             'bulgarian': 'Хоби: '
         },
-        'Others:': {
+        'Others: ': {
             'german': 'Andere: ',
             'bulgarian': 'Други: '
         },
@@ -310,19 +310,19 @@ $('#selectLanguageDropdown').localizationTool({
             'german': '01) Programmiergrundlagen',
             'bulgarian': '01) Основи на програмирането'
         },
-        'Web development': {
-            'german': '03) Web Entwicklung',
-            'bulgarian': '03) Уеб разработка'
+        ' 03) Web development (HTML, CSS, SASS/LESS, Bootstrap)  ': {
+            'german': '03) Web Entwicklung (HTML, CSS, SASS/LESS, Bootstrap)',
+            'bulgarian': '03) Уеб разработка (HTML, CSS, SASS/LESS, Bootstrap)'
         },
-        'Object-oriented programming': {
-            'german': '07) Objekt-orientierte Programmierung',
-            'bulgarian': '07) Обектно-ориентирано програмиране'
+        ' 07) Object-oriented programming (OOP)  ': {
+            'german': '07) Objekt-orientierte Programmierung (OOP)',
+            'bulgarian': '07) Обектно-ориентирано програмиране (ООП)'
         },
-        'High-quality code ': {
-            'german': '08) Hochwertiger Code',
-            'bulgarian': '08) Висококачествен код'
+        '08) High-quality code (HQC)': {
+            'german': '08) Hochwertiger Code (HWC)',
+            'bulgarian': '08) Висококачествен код (ВКК)'
         },
-        'Game Development With Unity3D Game Engine': {
+        '09) Game Development With Unity3D Game Engine': {
             'german': '09) Spieleentwicklung mit Unity3D Game Engine',
             'bulgarian': '09) Разработване на игри с Unity3D Game Engine'
         },
