@@ -105,9 +105,9 @@ $('#selectLanguageDropdown').localizationTool({
             'german': 'Angesiedelt in Österreich ',
             'bulgarian': 'Установен в Австрия'
         },
-        'A Solo Game Developer': {
-            'german': 'Ein Solo-Spieleentwickler',
-            'bulgarian': 'Соло Разработчик на компютърни игри'
+        'A Game Developer': {
+            'german': 'Ein Spieleentwickler',
+            'bulgarian': 'Разработчик на компютърни игри'
         },
         'I also love to': {
             'german': 'Ich liebe auch zu',
@@ -222,11 +222,31 @@ $('#selectLanguageDropdown').localizationTool({
             'bulgarian': 'Разгледайте няколко от моите произведения'
         },
 
-
-        'id:titleIdPortfolio': {
+        'id:TitleId-Games': {
             'german': 'Spiele',
             'bulgarian': 'Игри'
         },
+        'id:TitleId2-Games': {
+            'german': 'Spiele',
+            'bulgarian': 'Игри'
+        },
+        'id:TitleId-Applications': {
+            'german': 'Applikationen',
+            'bulgarian': 'Приложения'
+        },
+        'id:TitleId2-Applications': {
+            'german': 'Applikationen',
+            'bulgarian': 'Приложения'
+        },
+        'id:TitleId-WebApplications': {
+            'german': 'Web Applikationen',
+            'bulgarian': 'Уеб приложения'
+        },
+        'id:TitleId-Education': {
+            'german': 'Ausbildung',
+            'bulgarian': 'Образование'
+        },
+
         'id:project1_Desc': {
             'german': 'Geschrieben auf C # in der Unity3D-Engine-Umgebung. Es ist ein schnelles, lustiges mobiles RPG-Spiel, in dem es darum geht, Beute zu sammeln, Bosse zu töten und sich vorzubereiten.',
             'bulgarian': 'написано на C # в Unity3D двигателната среда. Това е бърза забавна мобилна RPG игра за събиране на плячка, убиване на шефове и подготовка.'
