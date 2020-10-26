@@ -133,7 +133,19 @@ $(document).ready(function ($) {
 					console.log(num);
 					$this.animateNumber({
 						number: num,
-						numberStep: comma_separator_number_step
+						numberStep: function(now, tween) {
+							var numberAnimate = Math.floor(now),
+							target = $(tween.elem);
+							if (numberAnimate > 99999) {
+								numberAnimate = Math.floor(now),
+								target = $(tween.elem);
+		
+								numberAnimate = (numberAnimate-(numberAnimate%1000))/1000;
+								numberAnimate = numberAnimate + 'K';
+							}
+
+							target.text(numberAnimate);
+						}
 					}, 7000);
 				});
 
@@ -259,11 +271,11 @@ $(document).ready(function ($) {
 			$('.back-to-top').fadeOut('fast');
 		}
 	});
-	$("a[href='#top']").click(function () {
+	$("a[href='#top']").click(function (e) {
+		e.preventDefault();
 		$("html, body").animate({
 			scrollTop: 0
 		}, "slow");
-		return false;
 	});
 	/*=============================*/
 
