@@ -125,7 +125,6 @@ $(document).ready(function ($) {
 		$('#section-counter').waypoint(function (direction) {
 
 			if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
-
 				// var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
 				$('.number').each(function () {
 					var $this = $(this),
