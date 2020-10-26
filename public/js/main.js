@@ -281,7 +281,7 @@ $(document).ready(function ($) {
 
 	// Zoom in Project Thumbnail Photo
 	$("a").click(function () {
-		if ($(this).attr('class').indexOf("image") > -1) {
+		if ($(this).hasClass("image")) {
 			var bgPath = $(this).css('background-image');
 			bgPath = bgPath.replace('url(', '').replace(')', '').replace(/\"/gi, "");
 			var projectTitle = $(this).attr('href');

@@ -306,23 +306,23 @@ $('#selectLanguageDropdown').localizationTool({
             'bulgarian': 'Американски университет в България'
         },
 
-        'Programming fundamentals': {
+        'id:softuni-01': {
             'german': '01) Programmiergrundlagen',
             'bulgarian': '01) Основи на програмирането'
         },
-        ' 03) Web development (HTML, CSS, SASS/LESS, Bootstrap)  ': {
+        'id:softuni-03': {
             'german': '03) Web Entwicklung (HTML, CSS, SASS/LESS, Bootstrap)',
             'bulgarian': '03) Уеб разработка (HTML, CSS, SASS/LESS, Bootstrap)'
         },
-        ' 07) Object-oriented programming (OOP)  ': {
+        'id:softuni-07': {
             'german': '07) Objekt-orientierte Programmierung (OOP)',
             'bulgarian': '07) Обектно-ориентирано програмиране (ООП)'
         },
-        '08) High-quality code (HQC)': {
+        'id:softuni-08': {
             'german': '08) Hochwertiger Code (HWC)',
             'bulgarian': '08) Висококачествен код (ВКК)'
         },
-        '09) Game Development With Unity3D Game Engine': {
+        'id:softuni-09': {
             'german': '09) Spieleentwicklung mit Unity3D Game Engine',
             'bulgarian': '09) Разработване на игри с Unity3D Game Engine'
         },
