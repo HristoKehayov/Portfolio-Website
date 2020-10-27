@@ -1,5 +1,9 @@
 {
   "projects": {
+<<<<<<< HEAD
     "default": "portfolio-website-d8775"
+=======
+    "default": "hristo-kehayov"
+>>>>>>> release
   }
 }
