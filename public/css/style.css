@@ -12738,7 +12738,7 @@ textarea.form-control {
   COOKIE CONCENT BANNER
 ============================*/
 #cookieConsent {
-  background-color: rgba(20,20,20,0.8);
+  background-color: #121212;
   min-height: 26px;
   font-size: 14px;
   color: #ccc;
