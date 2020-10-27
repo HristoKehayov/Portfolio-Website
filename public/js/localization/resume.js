@@ -117,9 +117,9 @@ $('#selectLanguageDropdown').localizationTool({
             'german': 'Kontaktieren Sie mich hier!',
             'bulgarian': 'Свържете се с мен тук!'
         },
-        'Email: hikponss@gmail.com': {
-            'german': 'Email: hikponss@gmail.com',
-            'bulgarian': 'E-Поща: hikponss@gmail.com'
+        'id:emailWord': {
+            'german': 'Email: ',
+            'bulgarian': 'E-Поща: '
         },
         /*=============================*/
 
@@ -140,7 +140,7 @@ $('#selectLanguageDropdown').localizationTool({
         },
         'First Name:': {
             'german': 'Vorname: ',
-            'bulgarian': 'Първо име: '
+            'bulgarian': 'Име: '
         },
         'Last Name:': {
             'german': 'Nachname: ',
@@ -169,6 +169,36 @@ $('#selectLanguageDropdown').localizationTool({
         'Others: ': {
             'german': 'Andere: ',
             'bulgarian': 'Други: '
+        },
+
+
+        'id:hristo':{
+            'german': 'Hristo',
+            'bulgarian': 'Христо'
+        },
+        'id:kehayov':{
+            'german': 'Kehayov',
+            'bulgarian': 'Кехайов'
+        },
+        'id:andothers':{
+            'german': 'und andere',
+            'bulgarian': 'и други'
+        },
+        'id:2years':{
+            'german': '2 Jahre',
+            'bulgarian': '2 години'
+        },
+        'id:gameprogramming':{
+            'german': 'Spielprogrammierung',
+            'bulgarian': 'Програмиране на игри'
+        },
+        'id:othersHobby':{
+            'german': 'Musik, Training, Erstellen',
+            'bulgarian': 'Музика, Спорт, Сътворяване'
+        },
+        'id:adressInfo':{
+            'german': '8010, Graz, Steiermark, Österreich',
+            'bulgarian': '8010, Грац, Щирия, Австрия'
         },
         /*=============================*/
 
@@ -256,6 +286,19 @@ $('#selectLanguageDropdown').localizationTool({
             'german': 'Petrich - Bulgaria',
             'bulgarian': 'Петрич - България'
         },
+
+        'id:bachelor': {
+            'german': 'Bachelor of Science in Informatik',
+            'bulgarian': 'Бакалавър по компютърни науки'
+        },
+        'id:gymnasium': {
+            'german': 'Gymnasium für Naturwissenschaften und Mathematik „Akad. Sergey Korolyov ”',
+            'bulgarian': 'Гимназия по наука и математика „Акад. Сергей Корольов ”'
+        },
+        'id:school': {
+            'german': 'Schule von "Nikola I. Vaptsarov"',
+            'bulgarian': 'Училище на "Никола И. Вапцаров"'
+        },
         /*=============================*/
 
         //--=============================
@@ -326,7 +369,6 @@ $('#selectLanguageDropdown').localizationTool({
             'german': '09) Spieleentwicklung mit Unity3D Game Engine',
             'bulgarian': '09) Разработване на игри с Unity3D Game Engine'
         },
-
         /*=============================*/
 
         //--=============================

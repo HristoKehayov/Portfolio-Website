@@ -147,9 +147,9 @@ $('#selectLanguageDropdown').localizationTool({
             'german': 'Kontaktieren Sie mich hier!',
             'bulgarian': 'Свържете се с мен тук!'
         },
-        'Email: hikponss@gmail.com': {
-            'german': 'Email: hikponss@gmail.com',
-            'bulgarian': 'E-Поща: hikponss@gmail.com'
+        'id:emailWord': {
+            'german': 'Email: ',
+            'bulgarian': 'E-Поща: '
         },
         /*=============================*/
 
