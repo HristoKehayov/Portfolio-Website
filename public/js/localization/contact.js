@@ -52,7 +52,10 @@ $('#selectLanguageDropdown').localizationTool({
         var newUrl = updateQueryStringParameter(window.location.href, 'lang', languageCode);
         window.history.pushState("", "", newUrl);
         location.reload();
-        return true;
+        window.onload=function(){
+            return true;
+        };
+        return false;
     },
     'labelTemplate': '{{language}}',
 
@@ -149,6 +152,22 @@ $('#selectLanguageDropdown').localizationTool({
         },
         /*=============================*/
 
+        //--=============================
+        //  COOKIE CONSENT
+        //===============================--/
+        'id:cookieConsentText':{
+            'german': 'Diese Website verwendet Cookies.',
+            'bulgarian': 'Този уебсайт използва бисквитки.'
+        },
+        'More info':{
+            'german': 'Mehr Info',
+            'bulgarian': 'Повече информация'
+        },
+        'That\'s Fine':{
+            'german': 'Zustimmen',
+            'bulgarian': 'Съгласен съм'
+        },
+        /*=============================*/
 
         //--=============================
         //  COPYRIGHT
@@ -208,6 +227,11 @@ $('#sendEmail').attr('value', SM)
 
 $('#selectLanguageDropdown').localizationTool('translate', setLangToTranslate());
 $('body').show();
+
+// $('#sendEmail').click(function () {
+//     translatePopUpMessage();
+// })
+
 
 function setLangToTranslate()
 {

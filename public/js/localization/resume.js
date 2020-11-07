@@ -52,7 +52,10 @@ $('#selectLanguageDropdown').localizationTool({
         var newUrl = updateQueryStringParameter(window.location.href, 'lang', languageCode);
         window.history.pushState("", "", newUrl);
         location.reload();
-        return true;
+        window.onload=function(){
+            return true;
+        };
+        return false;
     },
     'labelTemplate': '{{language}}',
 
@@ -111,7 +114,7 @@ $('#selectLanguageDropdown').localizationTool({
         },
         'Checkout my resume': {
             'german': 'Kasse meinen Lebenslauf',
-            'bulgarian': 'Разгледай Автобиографията ме'
+            'bulgarian': 'Разгледай Автобиографията ми'
         },
         'Contact me here!': {
             'german': 'Kontaktieren Sie mich hier!',

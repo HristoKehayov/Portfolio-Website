@@ -321,20 +321,64 @@ $(document).ready(function ($) {
 	/*=============================*/
 
 
-	//Send Email
+	/*--==========================
+	  SEND EMAIL
+	============================*/
 	$('#sendEmail').click(function () {
+		var popup_titles = [
+			"Opps...\nSomething went wrong", 
+			"Опа...\nНещо се обърка!", 
+			"Opps...\nEtwas ist schief gelaufen!"
+		];
+		var popup_text = [
+			"Some of the fields are empty!", 
+			"Някои от полетата са празни!", 
+			"Einige der Felder sind leer!"
+		];
+		var popup_footer = [
+			"Why do I have this issue?", 
+			"Защо имам този проблем?", 
+			"Warum habe ich dieses Problem?"
+		];
+		var popup_successTitle = [
+			"Success!", 
+			"Успех!", 
+			"Erfolg!"
+		];
+		var popup_successText = [
+			"Your message has been sent successfully!", 
+			"Съобщението Ви беше изпратено успешно!", 
+			"Ihre Nachricht wurde erfolgreich gesendet!"
+		];
+		var popup_infoTitle = [
+			"Thank you \nfor contacting me!", 
+			"Благодаря Ви, че се свързахте с мен!", 
+			"Vielen Dank, dass Sie mich kontaktiert haben!"
+		];
+		var popup_infoText = [
+			"I will make sure to get back to you as soon as possible!", 
+			"Ще се погрижа да се свържа с вас възможно най-скоро!", 
+			"Ich werde mich so schnell wie möglich bei Ihnen melden!"
+		];
+		var popup_Great = [
+			"Great",
+			"Страхотно",
+			"Toll"
+		]
+
 		// var formName = $("#name").val();
 		var formEmail = $("#email").val();
 		var formSubject = $("#subject").val();
 		var formMessage = $("#message").val();
 		const requiredEmailChars = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
+		var langIndex = setPopUpLangIndex();
 		if (formEmail == "" && formSubject == "" && formSubject == "" && formMessage == "") {
 			Swal.fire({
 				icon: 'error',
-				title: "Opps...\nSomething went wrong!",
-				text: 'Some of the fields are empty!',
-				footer: '<a href>Why do I have this issue?</a>'
+				title: popup_titles[langIndex],
+				text: popup_text[langIndex],
+				// footer: '<a href>Why do I have this issue?</a>'
+				footer: "<a href>"+popup_footer[langIndex]+"</a>"
 			})
 		} else if (requiredEmailChars.test(formEmail)) {
 			Email.send({
@@ -348,18 +392,17 @@ $(document).ready(function ($) {
 			}).then(
 				Swal.fire({
 					icon: 'success',
-					title: 'Success!',
-					html: 'Your message has been sent successfully!'
+					title: popup_successTitle[langIndex],
+					html: popup_successText[langIndex],
 				}).then((result) => {
 					if (result.isConfirmed) {
-						let timerInterval
 						Swal.fire({
-							title: 'Thank you \nfor contacting me!',
+							title: popup_infoTitle[langIndex],
 							icon: 'info',
-							html: 'I will make sure to get back to you as soon as possible!',
+							html: popup_infoText[langIndex],
 							showCloseButton: true,
 							focusConfirm: false,
-							confirmButtonText: '<i class="icon icon-thumbs-up"></i> Great!',
+							confirmButtonText: "<i class=\"icon icon-thumbs-up\"></i>" + popup_Great[langIndex] + "!",
 							confirmButtonAriaLabel: 'Thumbs up, great!',
 						}).then((result) => {
 							/* Read more about handling dismissals below */
@@ -380,6 +423,21 @@ $(document).ready(function ($) {
 			})
 		}
 	});
+
+	function setPopUpLangIndex()
+	{
+		var userLanguageCookie = $.cookie('userLanguage');
+		var index = 0;
+		if (typeof userLanguageCookie !== 'undefined') {
+			// has lang cookie
+			switch (userLanguageCookie) {
+				case 'bulgarian': index = 1; break;
+				case 'german': index = 2; break;
+				default: index = 0; break;
+			}
+		}
+		return index;
+	}
 	/*=============================*/
 
 	/*--==========================
@@ -415,3 +473,5 @@ function updateQueryStringParameter(uri, key, value) {
         return uri + separator + key + "=" + value;
     }
 }
+
+
