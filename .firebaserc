@@ -1,9 +1,5 @@
 {
   "projects": {
-<<<<<<< HEAD
-    "default": "hristo-kehayov"
-=======
     "main": "hristo-kehayov"
->>>>>>> f00e4d529a628ff37b0146b3a1b67989e1370162
   }
 }
