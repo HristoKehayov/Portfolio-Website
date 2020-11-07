@@ -426,15 +426,12 @@ $(document).ready(function ($) {
 
 	function setPopUpLangIndex()
 	{
-		var userLanguageCookie = $.cookie('userLanguage');
+		var userLangQueryString = getQueryStringByName('lang');
 		var index = 0;
-		if (typeof userLanguageCookie !== 'undefined') {
-			// has lang cookie
-			switch (userLanguageCookie) {
-				case 'bulgarian': index = 1; break;
-				case 'german': index = 2; break;
-				default: index = 0; break;
-			}
+		switch (userLangQueryString) {
+			case 'bulgarian': index = 1; break;
+			case 'german': index = 2; break;
+			default: index = 0; break;
 		}
 		return index;
 	}
@@ -463,15 +460,13 @@ $(document).ready(function ($) {
 	/*=============================*/	
 });
 
-
-function updateQueryStringParameter(uri, key, value) {
-    var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
-    var separator = uri.indexOf('?') !== -1 ? "&" : "?";
-    if (uri.match(re)) {
-        return uri.replace(re, '$1' + key + "=" + value + '$2');
-    } else {
-        return uri + separator + key + "=" + value;
-    }
+function getQueryStringByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
 
 
