@@ -6160,7 +6160,7 @@ button.close {
   /* border: 1px solid rgba(0, 0, 0, 0.2); */
   /* border-radius: 0.3rem; */
   /* outline: 0; */
-  border-radius: 20px 20px 35px 35px;
+  border-radius: 15px 15px 10px 10px;
 }
 
 .modal-backdrop {
@@ -6209,6 +6209,8 @@ button.close {
   width: 100%;
   vertical-align: middle;
   text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px #000
 }
 
 .modal-title {
@@ -10484,8 +10486,8 @@ body .KW_progressContainer {
   overflow: hidden;
   background-color: #121212;
   content: "";
-  display: table;
-  table-layout: fixed;
+  display: flex;
+  /* table-layout: fixed; */
   z-index: 999;
 }
 
@@ -12731,7 +12733,9 @@ textarea.form-control {
   align-items: center;
   display: flex;
 }
-
+.modal-body img#imagepreview{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 /*=============================*/
 
 /*--==========================
