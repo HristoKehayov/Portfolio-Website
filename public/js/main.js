@@ -297,9 +297,7 @@ $(document).ready(function ($) {
 	// Skills Progress bar animation
 	var skillsProgressBarsAnim = function () {
 		$('#section-skills').waypoint(function (direction) {
-
 			if (direction === 'down' && !$(this.element).hasClass('ftco-animated')) {
-
 				$(".progress-bar").each(function () {
 					var aria_valuenow = $(this).attr("aria-valuenow");
 					$(this).animate({
