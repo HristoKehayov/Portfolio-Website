@@ -381,9 +381,9 @@ $(document).ready(function ($) {
 		} else if (requiredEmailChars.test(formEmail)) {
 			Email.send({
 				Host: "smtp.gmail.com",
-				Username: "hikponss@gmail.com",
-				Password: "KwfnDEzUteM44vA",
-				To: 'hikponss@gmail.com',
+				Username: "hristokehayov@gmail.com",
+				Password: "Hristo04042000",
+				To: 'hristokehayov@gmail.com',
 				From: formEmail,
 				Subject: formSubject,
 				Body: formMessage,
